@@ -63,14 +63,14 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     # Custom Apps
-    # 'ssg_pages',
+    'ssg_pages',
     # 'ssg_games',
     # 'ssg_blog',
     # 'ssg_accounts',
     # 'ssg_contact',
     # Providers
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.google',
+    # 'allauth.socialaccount.providers.facebook',
 ]
 
 SITE_ID = 1
