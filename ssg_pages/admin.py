@@ -1,8 +1,10 @@
 """
 Admin configuration for the Team model.
 
-This module sets up the admin interface for the Team model, 
-including display options, filters, search fields, and integration 
+This module sets up the admin interface 
+for the Team model, 
+including display options, filters, 
+search fields, and integration 
 with the Summernote text editor.
 
 Classes:
@@ -50,7 +52,8 @@ class TeamAdmin(SummernoteModelAdmin):
             str: An HTML img tag with the profile image URL.
         """
         return format_html(
-            f'<img src="{team_member.profile_image.url}" width="50" style="border-radius:50px;" />')
+            f'<img src="{team_member.profile_image.url}" width="50" style="border-radius: 50px">'
+        )
     thumbnail.short_description = 'Image'
 
     # List display fields for the Team model
