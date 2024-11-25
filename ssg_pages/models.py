@@ -21,7 +21,7 @@ class Team(models.Model):
         position (CharField): The position of the team member.
         profile_image (CloudinaryField): The profile image of the team member.
         content (TextField): Additional content about the team member.
-        updated_on (DateTimeField): The date and time when the team member's 
+        updated_on (DateTimeField): The date and time when the team member's
         information was last updated.
     """
     first_name = models.CharField(max_length=200)
