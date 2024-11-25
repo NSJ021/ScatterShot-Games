@@ -1,0 +1,125 @@
+{% load static %}
+
+<!-- Main header start -->
+
+<header class="main-header sticky-header header-with-top">
+    <div class="container">
+        <!-- Start of NavBar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <i class="fa-solid fa-dice"></i>
+                 ScatterShot Games
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <!-- Main Menu Links -->
+                    <li class="nav-item">
+                        <a 
+                        {% if '/' == request.path %}
+                        class="nav-link active"
+                        {% else %} 
+                        class="nav-link"
+                        {% endif %}
+                        href="{% url 'home' %}"><i class="fa-solid fa-house"></i>
+                         Home
+                        </a>
+                    </li>
+
+                    <li class='nav-item'>
+                        <a                        
+                        {% if request.resolver_match.url_name == 'games' %}
+                        class="nav-link active"
+                        {% else %} 
+                        class="nav-link"
+                        {% endif %}
+                        href="{% url 'games' %}"><i class="fa-solid fa-chess-board"></i>
+                         Games
+                        </a>
+                    </li>
+
+                    <li class='nav-item'>
+                        <a                        
+                        {% if '/about' == request.path %}
+                        class="nav-link active"
+                        {% else %} 
+                        class="nav-link"
+                        {% endif %} 
+                        href="{% url 'about' %}"><i class="fa-solid fa-circle-info"></i>
+                         About
+                        </a>
+                    </li>
+
+                    <li class='nav-item'>
+                        <a                        
+                        {% if request.resolver_match.url_name == 'blog' %}
+                        class="nav-link active"
+                        {% else %} 
+                        class="nav-link"
+                        {% endif %}
+                        href="{% url 'blog' %}"><i class="fa-solid fa-blog"></i>
+                         Blog
+                        </a>
+                    </li>
+
+                    <li class='nav-item'>
+                        <a                        
+                        {% if request.resolver_match.url_name == 'contact' %}
+                        class="nav-link active"
+                        {% else %} 
+                        class="nav-link"
+                        {% endif %}
+                        href="{% url 'contact' %}"><i class="fa-solid fa-message"></i>
+                         Contact
+                        </a>
+                    </li>
+
+                    <!-- User Login Links -->
+
+                    <!-- Check is user authenticated, Show User Dashboard and logout links -->
+                    {% if user.is_authenticated %}
+                    <li class='nav-item'>
+                        <a class="nav-link" href="{% url 'dashboard' %}" class="sign-in nav-link"><i class="fa fa-user"></i> Dashboard</a>
+                    </li>
+
+                    <li class='nav-item'>
+                        <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}" class="sign-out nav-link"><i class="fa fa-sign-out"></i> Logout</a>
+                        <form action="{% url 'logout' %}" method="POST" id="logout">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+                    </li>
+
+                    <!-- Else: show login and signup links -->
+                    {% else %}
+                        <li class='nav-item'>
+                        <a                        
+                        {% if '/accounts/login' == request.path %}
+                        class="nav-link active sign-in"
+                        {% else %} 
+                        class="nav-link sign-in"
+                        {% endif %} 
+                        href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Login</a>
+                    </li>
+
+                    <li class='nav-item'>
+                        <a                        
+                        {% if '/accounts/signup' == request.path %}
+                        class="nav-link active sign-in"
+                        {% else %} 
+                        class="nav-link sign-in"
+                        {% endif %} 
+                        href="{% url 'signup' %}"><i class="fa fa-user"></i> Register</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </nav>
+        <!-- End of NavBar -->
+    </div>
+</header>
+<!-- Main header end -->
