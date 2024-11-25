@@ -29,7 +29,7 @@
                         </a>
                     </li>
 
-                    <li class='nav-item'>
+                    {% comment %} <li class='nav-item'>
                         <a                        
                         {% if request.resolver_match.url_name == 'games' %}
                         class="nav-link active"
@@ -39,7 +39,7 @@
                         href="{% url 'games' %}"><i class="fa-solid fa-chess-board"></i>
                          Games
                         </a>
-                    </li>
+                    </li> {% endcomment %}
 
                     <li class='nav-item'>
                         <a                        
@@ -53,7 +53,7 @@
                         </a>
                     </li>
 
-                    <li class='nav-item'>
+                    {% comment %} <li class='nav-item'>
                         <a                        
                         {% if request.resolver_match.url_name == 'blog' %}
                         class="nav-link active"
@@ -63,9 +63,9 @@
                         href="{% url 'blog' %}"><i class="fa-solid fa-blog"></i>
                          Blog
                         </a>
-                    </li>
+                    </li> {% endcomment %}
 
-                    <li class='nav-item'>
+                    {% comment %} <li class='nav-item'>
                         <a                        
                         {% if request.resolver_match.url_name == 'contact' %}
                         class="nav-link active"
@@ -75,12 +75,12 @@
                         href="{% url 'contact' %}"><i class="fa-solid fa-message"></i>
                          Contact
                         </a>
-                    </li>
+                    </li> {% endcomment %}
 
                     <!-- User Login Links -->
 
                     <!-- Check is user authenticated, Show User Dashboard and logout links -->
-                    {% if user.is_authenticated %}
+                    {% comment %} {% if user.is_authenticated %}
                     <li class='nav-item'>
                         <a class="nav-link" href="{% url 'dashboard' %}" class="sign-in nav-link"><i class="fa fa-user"></i> Dashboard</a>
                     </li>
@@ -91,10 +91,10 @@
                             {% csrf_token %}
                             <input type="hidden">
                         </form>
-                    </li>
+                    </li> {% endcomment %}
 
                     <!-- Else: show login and signup links -->
-                    {% else %}
+                    {% comment %} {% else %}
                         <li class='nav-item'>
                         <a                        
                         {% if '/accounts/login' == request.path %}
@@ -114,7 +114,7 @@
                         {% endif %} 
                         href="{% url 'signup' %}"><i class="fa fa-user"></i> Register</a>
                     </li>
-                    {% endif %}
+                    {% endif %} {% endcomment %}
 
                 </ul>
             </div>

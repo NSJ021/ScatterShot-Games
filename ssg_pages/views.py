@@ -10,8 +10,8 @@ Views:
 """
 
 from django.shortcuts import render
-from ssg_blog.models import Post, Comment
-from ssg_games.models import Game
+# from ssg_blog.models import Post, Comment
+# from ssg_games.models import Game
 from .models import Team
 
 
@@ -38,16 +38,16 @@ def home(request):
     """
     # Fetch all team members, posts, comments, and games from the database
     team = Team.objects.all()
-    post = Post.objects.all()
-    comment = Comment.objects.all()
-    game = Game.objects.all()
+    # post = Post.objects.all()
+    # comment = Comment.objects.all()
+    # game = Game.objects.all()
     # Render the home page template with the fetched data
     return render(request, 'ssg_pages/home.html',
                   {
                       'team': team,
-                      'posts': post,
-                      'comments': comment,
-                      'games': game
+                      #   'posts': post,
+                      #   'comments': comment,
+                      #   'games': game
                   },
                   )
 
