@@ -13,8 +13,133 @@
 </div>
 <!-- Banner end -->
 
+<!-- Featured Games start -->
+
+<div class="featured-section content-area-2">
+    {% include 'includes/messages.html' %}
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1><i class="fa-solid fa-dice"></i> <span>Featured Games</span> <i class="fa-solid fa-dice"></i></h1>
+            <p>Checkout our recent releases and featured content.</p>
+        </div>
+        <!-- Slick slider area start -->
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                {% for game in games %} {% if game.is_featured == True %}
+                <div class="slick-slide-item">
+                    <div class="featured-games-box">
+                        <div class="game-thumbnail">
+                            {% if "placeholder" in game.game_image_main.url %}
+                            <a href="#">
+                                <div class="tag-2">Featured</div>
+                                <img class="d-block w-100" draggable="false" src="{% static 'img/logos/logo.jpg' %}" alt="ScatterShot Logo" style="min-height: 450px; max-height: 450px" />
+                            </a>
+                            {% else %}
+                            <a href="#">
+                                <div class="tag-2">Featured</div>
+                                <img class="d-block w-100" draggable="false" src="{{ game.game_image_main.url }}" alt="{{ game.game_title }}" style="min-height: 450px; max-height: 450px" />
+                            </a>
+                            {% endif %}
+                            <div class="game-overlap-wrapper">
+                                <div class="overlap-box">
+                                    <div class="overlap-btns-area">
+                                        <div class="game-magnify-gallery">
+                                            <a href="{{ game.game_image_main.url }}" class="overlap-btn">
+                                                <i class="fa fa-expand"></i>
+                                                <img class="hidden" draggable="false" src="{{ game.game_image_main.url }}" alt="{{ game.game_title }}" />
+                                            </a>
+                                            {% if game.game_image_2 %}
+                                            <a href="{{ game.game_image_2.url }}" class="hidden">
+                                                <img class="hidden" draggable="false" src="{{ game.game_image_2.url }}" alt="{{ game.game_title }}" />
+                                            </a>
+                                            {% endif %} {% if game.game_image_3 %}
+                                            <a href="{{ game.game_image_3.url }}" class="hidden">
+                                                <img class="hidden" draggable="false" src="{{ game.game_image_3.url }}" alt="{{ game.game_title }}" />
+                                            </a>
+                                            {% endif %} {% if game.game_image_4 %}
+                                            <a href="{{ game.game_image_4.url }}" class="hidden">
+                                                <img class="hidden" draggable="false" src="{{ game.game_image_4.url }}" alt="{{ game.game_title }}" />
+                                            </a>
+                                            {% endif %} {% if game.game_image_5 %}
+                                            <a href="{{ game.game_image_5.url }}" class="hidden">
+                                                <img class="hidden" draggable="false" src="{{ game.game_image_5.url }}" alt="{{ game.game_title }}" />
+                                            </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h1 class="title">
+                                <a href="{% url 'game_detail' game.slug %}"><i class="fa-solid fa-chess-board"></i> {{ game.game_title }}</a>
+                            </h1>
+                            <div class="game-creator">
+                                <a href="{% url 'game_detail' game.slug %}"> <i class="fa-solid fa-user"></i> {{ game.creator}} </a>
+                                {{ game.game_brief | safe }}
+                            </div>
+
+                            <p><i class="fa-solid fa-user-plus"></i> Players : {{ game.players }}</p>
+                            <p><i class="fa-solid fa-clock"></i> Play Time : {{ game.game_time }} Minutes</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="slick-btn">
+                <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="slick-next slick-arrow-buton sab-3">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Featured Games end -->
+
+<!-- Blog Section start -->
+<div class="featured-section content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1><i class="fa-solid fa-blog"></i> <span>Latest News</span> <i class="fa-solid fa-blog"></i></h1>
+            <p>ScatterShot Blog Space, your one stop shop for all things ScatterShot</p>
+        </div>
+        <div class="row">
+            {% for post in posts %} {% if post.is_featured == True and post.status == 1%}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top" draggable="false" src="{% static 'img/feedandbreed/feed_breed_fox_card.jpg' %}" alt="placeholder blog image" />
+                            {% else %}
+                            <img class="card-img-top" draggable="false" src=" {{ post.featured_image.url }}" alt="{{ post.title }}" />
+                            {% endif %}
+                            <div class="image-flash">
+                                <p class="author">Author: {{ post.author }}</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p>{{ post.excerpt }}</p>
+                        </a>
+                        <hr />
+                        <p class="card-text text-muted h6">{{ post.created_on}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Blog Section end -->
+
 <!-- About start -->
-<div class="our-team content-area bg-grea-3">
+<div class="content-area bg-area-3">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
