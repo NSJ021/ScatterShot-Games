@@ -39,7 +39,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
@@ -183,9 +183,15 @@ CLOUDINARY_STORAGE = {
 # Summernote Settings
 
 SUMMERNOTE_CONFIG = {
-    'attachment_storage_class': 'cloudinary_storage.storage.MediaCloudinaryStorage',
-    'attachment_url': 'https://res.cloudinary.com/dt5yygt6j/raw/upload/{filename}',
-    'attachment_upload_to': 'Scattershot-summernote/',
+
+    'attachment_storage_class':
+    'cloudinary_storage.storage.MediaCloudinaryStorage',
+
+    'attachment_url':
+    'https://res.cloudinary.com/dt5yygt6j/raw/upload/{filename}',
+
+    'attachment_upload_to':
+    'Scattershot-summernote/',
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
