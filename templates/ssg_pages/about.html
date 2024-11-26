@@ -14,6 +14,40 @@
 <!-- Banner end -->
 
 <!-- About start -->
+<div class="our-team content-area bg-grea-3">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1><i class="fa-solid fa-people-group"></i> <span>Team ScatterShot </span> <i class="fa-solid fa-people-group"></i></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+        <!-- Slick slider area start -->
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                {% for team in team %}
+                <div class="slick-slide-item">
+                    <div class="team-1">
+                        <div class="photo">
+                            <a href="#">
+                                {% if "placeholder" in team.profile_image.url %}
+                                <img src="{% static 'img/logos/logo.jpg' %}" class="img-fluid" draggable="false" alt="placeholder team image" />
+                                {% else %}
+                                <img src="{{ team.profile_image.url }}" class="img-fluid" draggable="false" alt="{{ team.position }}" />
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h4>{{team.first_name}}</h4>
+                            <h5>{{team.position}}</h5>
+                            {{team.content | safe}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- About end -->
 {% endblock %}
