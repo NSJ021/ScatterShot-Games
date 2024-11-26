@@ -171,60 +171,183 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 
 ### Core Features (Must-Haves)
 
--   **Feature 1:** Description of the implemented feature.
+-   **Feature 1:** Homepage, with featured Games and Blog posts shown
+
+The <strong>Homepage</strong> is the entry point to the website and highlight all the latest information and products on offer from Scattershot Games.
+Key points to highlight are the filtering and displaying of selected data from various models.
+For example, the site admin has the ability to flag any game or blog post as <strong>"Featured"</strong>, once tagged the data will be presented on the homepage.
+This allows a conveinent way for the admin to mange their site content.
+
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_1.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_homepage.png" alt="ssg feature image">
 </P>
 <br>
 
--   **Feature 2:** Description of the implemented feature.
+---
+
+-   **Feature 2:** Dedicated Games Page
+
+The <strong>Games Page</strong>, is a dedicated page that shows all products available from Scattershot Games.
+By default the page will show 4 games at once and sorted alphabetically if there are more than 4 games to be displayed then pagination will take place.
+Each game has its own details page, which is a dedicated page to that particualr game, on this page all authenicated users will be able to comment on the game.
+Only authenticated users can comment, once authenticated it allows the user to comment and manage their own comment, such as editing and deleting them.
+Worth noting all comments must be <strong>approved</strong> via a site admin in the admin panel before they become Live for all to see.
+
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_2.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_gamepage.png" alt="ssg feature image">
 </P>
 <br>
 
-(Include all must-have features)  
-**Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
+---
+
+-   **Feature 3:** Dedicated Blog Page
+
+The <strong>Blog Page</strong>, is another dedicated page which is utilised to highlight all blog articles Scattershot want to share.
+This page will show all blog posts that are tagged as <strong>published</strong>, this addition to this feature allows the site admin to manage their content with ease.
+Each blog post has its own details page, which is a dedicated page to that particualr blog post, on this page all authenicated users will be able to comment on the articles.
+Only authenticated users can comment, once authenticated it allows the user to comment and manage their own comment, such as editing and deleting them.
+Worth noting all comments must be <strong>approved</strong> via a site admin in the admin panel before they become Live for all to see.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_blogpage.png" alt="ssg feature image">
+</P>
+<br>
+
+---
+
+-   **Feature 4:** Registration page
+
+The <strong>Registration Page</strong>, allows site visitors to sign up to the Scattershot site. Which in turn grants them additional abilities.
+Such as commenting on all games and blog posts being displayed on the site.
+Visitors will have the ability to signup in a conventional sense via the form or they can choose to signup via their <strong>Facebook</strong> or <strong>Google</strong> account also.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_registration.png" alt="ssg feature image">
+</P>
+<br>
+
+---
+
+-   **Feature 5:** login and Logout Functionality
+
+<strong>Login, Logout Functionality</strong> is a must have feature for any website nowadays. Scattershot is no exception.
+Via the login screen a registered user can login with their username and password or via their <strong>Facebook</strong> and or <strong>Google</strong> account.
+Thus giving the user a variety of login method, depending on their preference.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_login.png" alt="ssg feature image">
+</P>
+<br>
+
+---
 
 ### Advanced Features (Should-Haves)
 
--   **Feature 1:** Description of the implemented feature.
+-   **Feature 1:** Contact Form
+
+Having a <strong>Contact Form</strong> on the Scattershot site opens up various opportunities,
+such as allowing the user to submit feedback as well as potential game ideas or even collaboration oportunities.
+
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_3.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_contact.png" alt="ssg feature image">
 </P>
 <br>
 
--   **Feature 2:** Description of the implemented feature.
+---
+
+-   **Feature 2:** About Page
+
+By providing an <strong>About Page</strong> on the Scattershot site this allows the visitor and or User to find out more about the inner workings of Scattershot.
+Who is involved ? who makes the games? Who manages the site ?
+
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_4.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_about.png" alt="ssg feature image">
 </P>
 <br>
 
-(Include all should-have features)  
-**Guidance:** Include any advanced features you implemented during Phase 3: Should User Stories Implementation & Any Advanced Features. Explain how these features enhance user experience and their alignment with the acceptance criteria.
+---
 
 ### Optional Features (Could-Haves)
 
--   **Feature 1:** Description of the implemented feature (if any).
+-   **Feature 1:** Cloudinary Storage for all images
+
+Utilising <strong>Cloud Storage</strong> is a great method of handling any and all image storage requirements.
+Cloudinary is the storage source of choice for this project.
+Cloudinary handles all storage of images for all games, blog posts and summernote editor images.
+It simply stores a link in the <strong>Postgres Database</strong> to the resource in cloudinary
+
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\ssg_feature_5.png" alt="ssg feature image">
 </P>
 <br>
 
--   **Feature 2:** Description of the implemented feature (if any).
+---
+
+-   **Feature 2:** Admin Panel Customisation
+
+By <strong>Customising</strong> the admin panel, this allows a much greater user experience for all of Team Scattershot, who will be managing the site.
+When talking about customisation,
+
+-   Additional <strong>Search Abilities</strong>
+-   <strong>Filtering</strong> based on relevant data e.g date or author.
+-   <strong>Thumbnails</strong> of any images to enhance user experience.
+-   Extra <strong>clickable</strong> Fields, for easier access.
+-   Additional Headings Displayed to show more information.
+-   <strong> Editable Fields </strong>, allowing staff to toggle values at any time.
+-   Summernote, which enables <strong>Rich Text Editor Functionality</strong> in various models to allow enhanced editing abilties.
+
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\ssg_feature_6.png" alt="ssg feature image">
 </P>
 <br>
 
-(Include any could-have features that were implemented or considered)  
-**Guidance:** If any could-have features were implemented, describe them here. This is an opportunity to showcase extra work done beyond the initial scope. But remember - keep it simple! Focus on the Must stories first. Could user story features are commonly earmarked for future project iterations.
+---
+
+-   **Feature 3:** User Feedback and Notification
+
+<strong>User feedback and Notification</strong>, this feature ties into the contact form functionality.
+Various messages are utilsed to inform the user of success or failure depending on the operation being conducted.
+E.g, if a User registers successfully or not.
+Other features of this topic include the <strong>Storage</strong> of the message submitted by the Visitor / User.
+By storing the message this allow staff to keep a record of the message and tag messages as read and or replied too.
+Additionally <strong>Emails</strong> are sent to all site admins and the email address of the Visitor / User who left the message.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_6.png" alt="ssg feature image">
+</P>
+<br>
+
+---
+
+-   **Feature 4:** User Dashboard
+
+Having a <strong>User Dashboard</strong>, not only gives polish to the web application but it provides a lcoation on the site that is unique to each User.
+The dashboard contains,
+
+-   All <strong>Messages</strong> sent by the user vai the contact form
+-   Any <strong>Comments</strong> left on a game by the User, with a link to the relevant page.
+-   Any <strong>Comments</strong> left on a blog post by the User, with a link to the relevant page.
+
+By providing this information to the User it gives them a snapshot fo their activity on the Scattershot site.
+Also worth mentioning when a site admin tags a message as read or replied, this is shown to the User on their Dashboard, thus providing additonal feedback and a greater <strong>User Experience</strong>.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_6.png" alt="ssg feature image">
+</P>
+<br>
+
+---
 
 ## Testing and Validation
 
