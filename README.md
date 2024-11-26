@@ -1,18 +1,29 @@
 # ScatterShot Games
 
+<p align="center">
 <img src=".\ReadMe_Images\ssg_final_product.png" alt="ssg final product image">
+</P>
+<br>
 
 ## Overview
 
 ### Purpose
 
-A brief description of the project's purpose, what it aims to achieve, and the value it provides to the users.  
-**Guidance:** Begin filling out this section during Phase 1: Ideation & Initial Setup. Clearly articulate the main goal of your project, what it aims to achieve, and how it will provide value to your target audience.
+<p align="center">
+<img src=".\ReadMe_Images\ssg_logo" alt="ssg logo">
+</P>
+<br>
+
+ScatterShot Games, is an Indie Board Games Creator. With already 4+ custom board games created in house and available to purchase.
+The purpose of this project is to create a full stack web application to allow ScatterShot to gain some online presence
+and build the brand as well as the business in general.
+
+The web application created as part of this project, will showcase Games, News/Blog articles and general information about ScatterShot and their business.
 
 ### Target Audience
 
-Identify the target audience for your website and explain why this audience will benefit from the project.  
-**Guidance:** Use this section to identify who will benefit from your project and why. This should be informed by your user stories and overall project objectives.
+With regards to a target audience, ScatterShot already has a following within the board game enthusiast space.
+There is no official target audience for this project other than to promote this growing Indie business and the great products they create.
 
 ## User Stories
 
@@ -48,30 +59,110 @@ Identify the target audience for your website and explain why this audience will
 
 ## Design Decisions
 
+### Project Board
+
+To keep the project on track, manage scope and work to Agile methodology a kanban style project board was created.
+This project board is continuously updated and utilised throughout the development cycles of the project.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_projectboard_1.png" alt="ssg project board image">
+</P>
+<br>
+
+<p align="center">
+<img src=".\ReadMe_Images\ssg_projectboard_2.png" alt="ssg project board image">
+</P>
+<br>
+
 ### Wireframes
 
 Include wireframes for key sections of your website.  
 Briefly describe the design choices, including layout, colour schemes, and fonts.  
 **Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
 
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_wireframe_desktop.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_wireframe_tablet.png" alt="ssg wireframe tablet image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_wireframe_mobile.png" alt="ssg wireframe mobile image">
+</P>
+<br>
+
 ### Accessibility Considerations
+
+#### Colour Scheme
+
+The chosen colour scheme, compliments the themes used within Scattershots products as well as pleasing to the eye.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_colour_scheme.png" alt="ssg colour scheme image">
+</P>
+<br>
+
+#### Colour Contrast
+
+Colour contrast was considered during the colour scheme selection. Details are shown below.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_colour_contrast.png" alt="ssg colour contrast image">
+</P>
+<br>
+
+#### Fonts
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_font_1.png" alt="ssg font image">
+</P>
+<br>
+
+#### LightHouse Scores
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_lighthouse_1.png" alt="ssg lighthouse score image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_lighthose_2.png" alt="ssg lighthouse score image">
+</P>
+<br>
 
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
 **Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
-
-## AI Tools Usage
-
-### DALL-E
-
-Describe how DALL-E was used for image generation, including examples of successes and challenges.  
-**Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
 
 ## Features Implementation
 
 ### Core Features (Must-Haves)
 
 -   **Feature 1:** Description of the implemented feature.
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_1.png" alt="ssg feature image">
+</P>
+<br>
+
 -   **Feature 2:** Description of the implemented feature.
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_2.png" alt="ssg feature image">
+</P>
+<br>
 
 (Include all must-have features)  
 **Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
@@ -79,7 +170,18 @@ Describe how DALL-E was used for image generation, including examples of success
 ### Advanced Features (Should-Haves)
 
 -   **Feature 1:** Description of the implemented feature.
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_3.png" alt="ssg feature image">
+</P>
+<br>
+
 -   **Feature 2:** Description of the implemented feature.
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_4.png" alt="ssg feature image">
+</P>
+<br>
 
 (Include all should-have features)  
 **Guidance:** Include any advanced features you implemented during Phase 3: Should User Stories Implementation & Any Advanced Features. Explain how these features enhance user experience and their alignment with the acceptance criteria.
@@ -87,27 +189,67 @@ Describe how DALL-E was used for image generation, including examples of success
 ### Optional Features (Could-Haves)
 
 -   **Feature 1:** Description of the implemented feature (if any).
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_5.png" alt="ssg feature image">
+</P>
+<br>
+
 -   **Feature 2:** Description of the implemented feature (if any).
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_6.png" alt="ssg feature image">
+</P>
+<br>
 
 (Include any could-have features that were implemented or considered)  
 **Guidance:** If any could-have features were implemented, describe them here. This is an opportunity to showcase extra work done beyond the initial scope. But remember - keep it simple! Focus on the Must stories first. Could user story features are commonly earmarked for future project iterations.
 
-## AI Tools Usage
-
-### GitHub Copilot
-
-Describe how GitHub Copilot assisted in coding, including any challenges or adjustments needed.  
-**Guidance:** Reflect on how GitHub Copilot assisted in coding, particularly any challenges or adjustments that were needed to align with project goals.
-
 ## Testing and Validation
 
 ### Testing Results
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_testing_1.png" alt="ssg testing image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_testing_2.png" alt="ssg testing image">
+</P>
+<br>
 
 Summarize the results of testing across different devices and screen sizes.  
 Mention any issues found and how they were resolved.  
 **Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
 
 ### Validation
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_html_validator.png" alt="ssg html validator image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_css_validator.png" alt="ssg css validator image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_JS_linter.png" alt="ssg JS linter image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_python_linter.png" alt="ssg python linter image">
+</P>
+<br>
 
 Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
 Include the results of the validation process.  
@@ -117,6 +259,12 @@ Include the results of the validation process.
 
 ### GitHub Copilot
 
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_copilot_1.png" alt="ssg copilot image">
+</P>
+<br>
+
 Brief reflection on the effectiveness of using AI tools for debugging and validation.  
 **Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
 
@@ -124,29 +272,35 @@ Brief reflection on the effectiveness of using AI tools for debugging and valida
 
 ### Deployment Process
 
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_heroku_1.png" alt="ssg heroku deployment image">
+</P>
+<br>
+
 Briefly describe the deployment process to GitHub Pages or another cloud platform.  
 Mention any specific challenges encountered during deployment.  
 **Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
 
-## Code Credits
+## Code Attribution and Credit
 
 ### Jquery, Gallery, SlickSlide etc
 
-TO create a more polished and interactive experience I utilised various javascript scripts to create the image galleries, magnification effect, and scroll-up functionality.
+To create a more polished and interactive experience I utilised various javascript scripts to create the image galleries, magnification effect, and scroll-up functionality.
 
-**Sources** <br>
-[Slick.js](http://kenwheeler.github.io) Slick provides a smooth side scroll function for the website<br>
-[Light Gallery](http://sachinchoolur.github.io/lightGallery/) Light Gallery, alongside Magnific Pop Up provides a great looking image gallery utilised across the site<br>
-[Jquery Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) Magnific provides an interactive image zoom and pop up functionality which works alongside the gallery.<br>
-[Jquery](https://www.jqueryscript.net/) Core Jquery code to allow jquery plugins to work properly<br>
-[Scroll Up](https://markgoodyear.com/2013/01/scrollup-jquery-plugin/) Scroll Up is another Jquery plugin that allows the user to jump back to the top of the page<br>
-[Bootstrap](https://getbootstrap.com) Bootstrap used for responsiveness, styling and required for the above plugins and functionality<br>
+**Sources** <br> <br>
+[Slick.js](http://kenwheeler.github.io) <br> Slick provides a smooth side scroll function for the website<br>
+[Light Gallery](http://sachinchoolur.github.io/lightGallery/) <br> Light Gallery, alongside Magnific Pop Up provides a great looking image gallery utilised across the site<br>
+[Jquery Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) <br> Magnific provides an interactive image zoom and pop up functionality which works alongside the gallery.<br>
+[Jquery](https://www.jqueryscript.net/) <br> Core Jquery code to allow jquery plugins to work properly<br>
+[Scroll Up](https://markgoodyear.com/2013/01/scrollup-jquery-plugin/) <br> Scroll Up is another Jquery plugin that allows the user to jump back to the top of the page<br>
+[Bootstrap](https://getbootstrap.com) <br> Bootstrap used for responsiveness, styling and required for the above plugins and functionality<br>
 
 ## Reflection on Development Process
 
 ### Successes
 
-Effective use of AI tools, including GitHub Copilot and DALL-E, and how they contributed to the development process.
+Effective use of AI tools, including GitHub Copilot, and how they contributed to the development process.
 
 ### Challenges
 
@@ -156,11 +310,6 @@ Describe any challenges faced when integrating AI-generated content and how they
 
 Provide any additional insights gained during the project and thoughts on the overall process.  
 **Guidance:** Begin drafting reflections during Phase 1 and update throughout the project. Finalize this section after Phase 4. Highlight successes and challenges, particularly regarding the use of AI tools, and provide overall insights into the project.
-
-## Code Attribution
-
-Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
-**Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
 
 ## Future Improvements
 
