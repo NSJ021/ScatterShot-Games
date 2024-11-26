@@ -77,6 +77,20 @@ This project board is continuously updated and utilised throughout the developme
 
 ### Entity Relationship Diagram
 
+The diagram linked below shows the relationship between all the tables / Models used throughout the project.
+The user, once authenticated is referenced at various points in other models.
+Each user can comment on a game and blog post, they will ahve control over editing and deleting their own commeents also.
+However, no comment will be made Live until an Admin user has approved the comment.
+This functionality highlights the <strong>CRUD</strong> abilities within the project.
+
+A brief description of the relationships are as follows:
+
+User from User Model is always a 1 to 1 relationship.
+Every Game can have many comments, but a comment can only belong to a single game
+Every Blog Post can have many comments, but a comment can only belong to a single post.
+A User can send many messages, but a message can only belong to one user.
+The team model is not linked to any other model via a relationship, as this functionality was not required for this project.
+
 <p align="center">
 <img src=".\ReadMe_Images\Entity_relationship_diagram.png" alt="ssg project board image">
 </P>
