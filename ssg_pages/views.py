@@ -51,6 +51,28 @@ def home(request):
                   },
                   )
 
+# def games(request):
+#     """
+#     Renders a list of all the games in the database.
+
+#     **Context**
+
+#     ``games``
+#         A queryset of all games.
+
+#     **Template:**
+
+#     :template:`ssg_games/games.html`
+#     """
+#     # Fetch all games from the database
+#     game = Game.objects.all()
+#     # Render the games page template with the fetched data
+#     return render(request, 'ssg_games/games.html',
+#         {
+#             'games': game
+#         },
+#     )
+
 
 def about(request):
     """
@@ -73,3 +95,31 @@ def about(request):
                       'team': team,
                   },
                   )
+
+
+# def blog(request):
+#     """
+#     Renders the blog page with posts and comments.
+
+#     **Context**
+
+#     ``posts``
+#         A queryset of all blog posts.
+#     ``comments``
+#         A queryset of all comments.
+
+#     **Template:**
+
+#     :template:`ssg_blog/blog.html`
+#     """
+#     # Fetch all blog posts and comments from the database
+#     post = Post.objects.all()
+#     comment = Comment.objects.all()
+#     # Render the blog page template with the fetched data
+#     return render(
+#         request, 'ssg_blog/blog.html',
+#             {
+#                 'posts': post,
+#                 'comments': comment
+#             },
+#     )
