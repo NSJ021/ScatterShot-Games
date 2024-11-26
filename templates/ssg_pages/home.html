@@ -24,7 +24,7 @@
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                {% comment %} {% for team in team %} {% endcomment %}
+                {% for team in team %}
                 <div class="slick-slide-item">
                     <div class="team-1">
                         <div class="photo">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                {% comment %} {% endfor %} {% endcomment %}
+                {% endfor %}
             </div>
         </div>
     </div>
