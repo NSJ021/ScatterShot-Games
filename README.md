@@ -128,12 +128,19 @@ Briefly describe the deployment process to GitHub Pages or another cloud platfor
 Mention any specific challenges encountered during deployment.  
 **Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
 
-## AI Tools Usage
+## Code Credits
 
-### Reflection
+### Jquery, Gallery, SlickSlide etc
 
-Describe the role AI tools played in the deployment process, including any benefits or challenges.  
-**Guidance:** Reflect on how AI tools assisted with the deployment process, particularly how they streamlined any tasks or presented challenges.
+TO create a more polished and interactive experience I utilised various javascript scripts to create the image galleries, magnification effect, and scroll-up functionality.
+
+**Sources** <br>
+[Slick.js](http://kenwheeler.github.io) Slick provides a smooth side scroll function for the website<br>
+[Light Gallery](http://sachinchoolur.github.io/lightGallery/) Light Gallery, alongside Magnific Pop Up provides a great looking image gallery utilised across the site<br>
+[Jquery Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) Magnific provides an interactive image zoom and pop up functionality which works alongside the gallery.<br>
+[Jquery](https://www.jqueryscript.net/) Core Jquery code to allow jquery plugins to work properly<br>
+[Scroll Up](https://markgoodyear.com/2013/01/scrollup-jquery-plugin/) Scroll Up is another Jquery plugin that allows the user to jump back to the top of the page<br>
+[Bootstrap](https://getbootstrap.com) Bootstrap used for responsiveness, styling and required for the above plugins and functionality<br>
 
 ## Reflection on Development Process
 
