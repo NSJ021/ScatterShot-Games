@@ -51,6 +51,7 @@ def home(request):
                   },
                   )
 
+
 # def games(request):
 #     """
 #     Renders a list of all the games in the database.
