@@ -25,6 +25,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.min.css' %}" />
 
         <!-- Custom stylesheet -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/skin.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
         <!-- Google fonts -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700" />
@@ -36,12 +38,12 @@
     <body>
         {% include 'includes/nav_bar.html' %} {% block content %} {% endblock %}
 
-        <!-- Intro section start -->
-        <div class="intro-section">
+        <!-- Questions Section -->
+        <div class="question-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-8 col-sm-12">
-                        <div class="intro-text">
+                        <div class="question-text">
                             <h3>Do You Have Questions ?</h3>
                         </div>
                     </div>
@@ -53,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <!-- Intro section end -->
+        <!-- Questions section end -->
 
         {% include 'includes/footer.html' %}
 
