@@ -10,7 +10,7 @@
 ### Purpose
 
 <p align="center">
-<img src=".\ReadMe_Images\ssg_logo" alt="ssg logo">
+<img src=".\ReadMe_Images\ssg_logo.jpg" alt="ssg logo">
 </P>
 <br>
 
@@ -72,6 +72,13 @@ This project board is continuously updated and utilised throughout the developme
 
 <p align="center">
 <img src=".\ReadMe_Images\ssg_projectboard_2.png" alt="ssg project board image">
+</P>
+<br>
+
+### Entity Relationship Diagram
+
+<p align="center">
+<img src=".\ReadMe_Images\Entity_relationship_diagram.png" alt="ssg project board image">
 </P>
 <br>
 
