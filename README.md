@@ -29,33 +29,260 @@ There is no official target audience for this project other than to promote this
 
 ### Must-Have User Stories
 
--   **User Story 1:** Briefly describe the must-have feature.  
-    **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
--   **User Story 2:** Briefly describe the must-have feature.  
-    **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+-   **User Story 1:** HomePage, As a Site Owner, I want a Homepage, where I can highlight recent business activity and games,
+    This will allow me to provide potential featured topics and games of my choosing.
+    <br><br>
+    **Acceptance Criteria:**
 
-(Include all prioritized must-have features)  
-**Guidance:** Draft the user stories during Phase 1: Ideation & Initial Setup and update them as you complete Phase 2: Must User Stories Implementation & Testing. Document each must-have feature here along with its acceptance criteria.
+    1. Create a Main Homepage
+    2. Display Business Activity and Games
+    3. Create "Is Featured" functionality to filter model content on the homepage
+
+---
+
+-   **User Story 2:** Blog Page, As a Site Owner, I want a News or Blog page. The page should allow me as the owner to add posts and for general users to comment on those posts.
+    Also, once registered and signed in, users should be able to comment, edit and delete their own comments.
+    All comments must be approved before being made live on the respective post.
+    So that I can keep my users and fans up to date with ScatterShot Games updates
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create a Blog Page
+    2. Site Owner/Admin Post creation
+    3. User Register/Login functionality
+    4. User can comment, edit and delete their comments (after registering and/or login)
+    5. Comments must be approved before made live
+
+---
+
+-   **User Story 3:** Blog Information Page, As a User, I want to view a blog post content on its own page.
+    So that I can get a full grasp of the article and enjoy the read.
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create blog details pages
+    2. Pages should be dynamic due to how data is pulled from the models
+
+---
+
+-   **User Story 4:** Blog Details Page, As a Site Owner, I want a more dedicated page for each blog post.
+    So that I can showcase the full details of that particular blog post
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create Blog Details page
+    2. Pages should be dynamically created as posts will be pulled from the database models
+
+---
+
+-   **User Story 5:** Games Page, As a Site Owner, I want a page to display all my games
+    So that I can have a catalogue of all my games
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create a Games page
+    2. Pull all game data from the model
+    3. Display all Games, possibly paginate
+
+---
+
+-   **User Story 6:** Game Information Page, As a User, I want to see a more specific page which is tailored to one game at a time
+    So that I can obtain more specific information about a certain game.
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create a Games Details page
+    2. Pages should be dynamically created as games will be pulled from the database models
+
+---
+
+-   **User Story 7:** Game Details Page, As a Site Owner, I want a more dedicated page for each Game displayed.
+    So that I can showcase the full details of that particular game.
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create a Games Details page
+    2. Pages should be dynamically created as games will be pulled from the database models
+
+---
+
+-   **User Story 8:** Registration Page, As a Site Owner, I want to be able to allow users to register for the Scattershot Games site
+    So that my users and fanbase access the site fully and participate in commenting on blog posts,
+    this will allow my fanbase to grow in general.
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create Registration Page
+    2. Registration Functionality
+    3. Notifications regarding success or failure of registration
+    4. Validation on the registration form, (Checking for existing Username, email, and matching password)
+
+---
+
+-   **User Story 9:** User Registration, As a User, I want to be able to register for Scattershot games
+    So that I can access the site fully and participate in commenting on blog posts
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create Registration Page
+    2. Registration Functionality
+    3. Notifications regarding success or failure of registration
+    4. Validation on the registration form, (Checking for existing Username, email, matching password)
+
+---
+
+-   **User Story 10:** Login Page, As a Site Owner, I want to be able to log in from the front end, rather than just the admin panel
+    So that I can easily log in, add comments and view the website as if a general user.
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create Login Page
+    2. Login functionality
+    3. Notifications to indicate login was successful or not
+
+---
+
+-   **User Story 11:** Logout Functionality, As a User, I want to be able to log off of my Scattershot account
+    So that I can ensure my account is secure and accessed by myself
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Logout Functionality
+    2. Notifications to show if logout was successful or not
+
+---
+
+-   **User Story 12:** Responsiveness, As a User, I want the site to work well on my tablet and phone
+    So that I can view the site on different screen sizes
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Ensure Mobile friendly
+    2. Ensure Tablet friendly
+    3. Use Media queries where needed to keep responsiveness consistent
+
+---
+
+-   **User Story 13:** Wireframing, As a Developer, The creation of wireframing and mock designs is required
+    So that a baseline idea and design can be worked towards
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create Wireframes from Mobile, Tablet and Desktop
+
+---
+
+-   **User Story 14:** Documentation, As a Site Owner, I want a detailed document of the inner workings of the website
+    So that I can learn how it was made and aid with the maintenance of the ongoing site.
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Provide a detailed ReadME.md file
+    2. Provide instruction on topics where site maintenance may require site owner/admin to access
+
+---
 
 ### Should-Have User Stories
 
--   **User Story 1:** Briefly describe the should-have feature.  
-    **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
--   **User Story 2:** Briefly describe the should-have feature.  
-    **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+-   **User Story 15:** About Page, As a Site Owner, I want an about page.
+    So that I can provide more information to site users about who ScatterShot Games are.
+    <br><br>
+    **Acceptance Criteria:**
 
-(Include all prioritized should-have features)  
-**Guidance:** Document the secondary features that you aim to implement in Phase 3: Should User Stories Implementation & Any Advanced Features. Include clear acceptance criteria for each.
+    1. Create About page
+    2. Possible Team ScatterShot Model?
+
+---
+
+-   **User Story 16:** Contact Page, As a Site Owner, I want a contact page
+    So that users can give feedback and get in touch with me if required.
+    At a minimum basic contact information, However perhaps an online form to allow easier contact
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create Contact page
+    2. Display relevant contact information
+    3. Web form to allow users to submit messages and their details in order to contact the site owner
+
+---
 
 ### Could-Have User Stories
 
--   **User Story 1:** Briefly describe the could-have feature.  
-    **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
--   **User Story 2:** Briefly describe the could-have feature.  
-    **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+-   **User Story 17:** Project Management, As a Developer, I would like to keep the project files organises by breaking the project into various smaller apps within Django.
+    So that I can manage the project and keep a cleaner file structure during the development process
+    <br><br>
+    **Acceptance Criteria:**
 
-(Include any could-have features considered for future enhancements)  
-**Guidance:** Document any optional features that are nice to have but not essential.
+    1. Create Multiple Apps within the project
+    2. Pages App - Manage majority of general webpages and navigation across the site (home, about, contact etc)
+    3. Games App - Manage all functionality for displaying games and related pages
+    4. Blog App - Manage all functionality for displaying the blog and related pages
+    5. Accounts App - Manage all login, register and user functionality
+
+---
+
+-   **User Story 18:** Page Construction, As a Developer, It would make sense to divide the website pages into logical chunks
+    So that the pages can be worked on easier
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create Base.html
+    2. Possibly split the nav bar into a separate file for easier management
+    3. Possibly split the footer into a separate file for easier management
+
+---
+
+-   **User Story 19:** Cloudinary Image Storage, As a Developer, I want to consider using cloud storage for certain aspects of the project
+    So that the project and site when live can serve images more dynamically whilst avoiding any potential pitfalls with hosting platforms such as Heroku.
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Consider adding in Cloudinary functionality to serve images for the various content within the project
+    2. If summernote is used as part of admin customisation, then enabling cloudinary functionality here also.
+
+---
+
+-   **User Story 20:** Admin Panel Customisation, As a Developer, I would like to provide a custom admin panel, concerning functionality and theme.
+    So that Admins and site owners are provided with a better user experience when maintaining the site
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Utilise list display, link-editable, list-display-links, and other admin panel features
+    2. Add a thumbnail image to add to the staff user experience when using the admin panel
+    3. Edit Admin panel theme to match the feel of the rest of the site
+    4. Possibly add packages like summernote to allow enhanced staff experience and editing abilities
+
+---
+
+-   **User Story 21:** User Feedback for Site Owner, As a Site Owner, I would like to receive an email or other method of knowing when a user submits a contact form
+    So that I can easily keep track of messages from users
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Email Feedback
+    2. Submitted feedback details are stored in a model in the database
+
+---
+
+-   **User Story 22:** User Dashboard, As a User, I would like a profile page, that showcases my activity on the ScatterShot site
+    So that I can keep track of my activity, comments and messages
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Create a Dashboard page
+    2. Display User relevant content, based on logged-in users.
+
+---
+
+-   **User Story 23:** Colour Theme, As a Developer, I would like to set and use some variables within the CSS
+    To allow easier colour theme changes on the site, depending on site owner preferences
+    <br><br>
+    **Acceptance Criteria:**
+
+    1. Define colour variable with root { --theme1 : #000000; }
+    2. Use var(--theme) to apply related colour
+
+---
 
 ## Design Decisions
 
