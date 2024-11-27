@@ -1,7 +1,3 @@
-body {
-    background-color: #64d362;
-}
-
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
@@ -35,7 +31,12 @@ body {
 }
 
 .card-title {
+    padding-top: 20px;
     color: #000000;
+}
+
+.card-img-top {
+    border-radius: 25px;
 }
 
 .image-container {
@@ -47,7 +48,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #33d9d9;
+    background-color: #d93333;
 }
 
 .scale {
@@ -166,4 +167,8 @@ body {
 
 .profile-image {
     width: 20vw;
+}
+
+.text-muted {
+    color: #23282e !important;
 }
