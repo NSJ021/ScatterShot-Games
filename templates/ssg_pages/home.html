@@ -5,7 +5,7 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner banner-slider-inner text-center">
             <div class="carousel-item banner-max-height active item-bg">
-                <img class="d-block w-100 h-100" src="{% static 'img/logos/logo.jpg' %}" alt="banner" />
+                <img class="d-block w-100 h-100" src="{% static 'img/logos/logo.webp' %}" alt="banner" />
                 <div class="carousel-content container banner-info-2 bi-2 text-left"></div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                             {% if "placeholder" in game.game_image_main.url %}
                             <a href="#">
                                 <div class="tag-2">Featured</div>
-                                <img class="d-block w-100" draggable="false" src="{% static 'img/logos/logo.jpg' %}" alt="ScatterShot Logo" style="min-height: 450px; max-height: 450px" />
+                                <img class="d-block w-100" draggable="false" src="{% static 'img/logos/logo.webp' %}" alt="ScatterShot Logo" style="min-height: 450px; max-height: 450px" />
                             </a>
                             {% else %}
                             <a href="#">
@@ -115,7 +115,7 @@
                     <div class="card-body">
                         <div class="image-container">
                             {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-img-top" draggable="false" src="{% static 'img/logos/logo.jpg' %}" alt="placeholder blog image" />
+                            <img class="card-img-top" draggable="false" src="{% static 'img/logos/logo.webp' %}" alt="placeholder blog image" />
                             {% else %}
                             <img class="card-img-top" draggable="false" src=" {{ post.featured_image.url }}" alt="{{ post.title }}" />
                             {% endif %}
@@ -155,7 +155,7 @@
                         <div class="photo">
                             <a href="#">
                                 {% if "placeholder" in team.profile_image.url %}
-                                <img src="{% static 'img/logos/logo.jpg' %}" class="img-fluid" draggable="false" alt="placeholder team image" />
+                                <img src="{% static 'img/logos/logo.webp' %}" class="img-fluid" draggable="false" alt="placeholder team image" />
                                 {% else %}
                                 <img src="{{ team.profile_image.url }}" class="img-fluid" draggable="false" alt="{{ team.position }}" />
                                 {% endif %}
