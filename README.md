@@ -232,7 +232,7 @@ Visitors will have the ability to signup in a conventional sense via the form or
 
 ---
 
--   **Feature 5:** login and Logout Functionality
+-   **Feature 5:** Login and Logout Functionality
 
 <strong>Login, Logout Functionality</strong> is a must have feature for any website nowadays. Scattershot is no exception.
 Via the login screen a registered user can login with their username and password or via their <strong>Facebook</strong> and or <strong>Google</strong> account.
@@ -299,7 +299,7 @@ When talking about customisation,
 -   Additional <strong>Search Abilities</strong>
 -   <strong>Filtering</strong> based on relevant data e.g date or author.
 -   <strong>Thumbnails</strong> of any images to enhance user experience.
--   Extra <strong>clickable</strong> Fields, for easier access.
+-   Extra <strong>Clickable</strong> Fields, for easier access.
 -   Additional Headings Displayed to show more information.
 -   <strong> Editable Fields </strong>, allowing staff to toggle values at any time.
 -   Summernote, which enables <strong>Rich Text Editor Functionality</strong> in various models to allow enhanced editing abilties.
@@ -369,6 +369,25 @@ Summarize the results of testing across different devices and screen sizes.
 Mention any issues found and how they were resolved.  
 **Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
 
+## Bugs and Known Issues
+
+### Bugs
+
+-   <strong>Bug 1</strong>: Issues when adding to a model on the deployed site, where cloudinary is used alognside the summernote editor.
+-   <strong>Fix</strong>: Cloudinary variable were not set correctly on heroku, DEBUG mode in Django helped figure out which variable was incorrect.
+
+-   <strong>Bug 2</strong>:
+-   <strong>Fix</strong>:
+
+-   <strong>Bug 3</strong>:
+-   <strong>Fix</strong>:
+
+-   <strong>Bug 4</strong>:
+-   <strong>Fix</strong>:
+
+-   <strong>Bug 5</strong>:
+-   <strong>Fix</strong>:
+
 ### Validation
 
 <br>
@@ -402,6 +421,10 @@ Include the results of the validation process.
 ## AI Tools Usage
 
 ### GitHub Copilot
+
+Github Copilot, has been utilised throughout the project with great success. The AI Pair Programming tool was used to ensure accurate docstrings and comments were applied throughout the project.
+Copilot was also extremely helpful when encountering errors, discussing ideas for the project and their related logic.
+Generally speaking Copilot was primarily used for fault finding, providing insight as well as explanations and documenting the code.
 
 <br>
 <p align="center">
