@@ -422,6 +422,10 @@ Include the results of the validation process.
 
 ### GitHub Copilot
 
+Github Copilot, has been utilised throughout the project with great success. The AI Pair Programming tool was used to ensure accurate docstrings and comments were applied throughout the project.
+Copilot was also extremely helpful when encountering errors, discussing ideas for the project and their related logic.
+Generally speaking Copilot was primarily used for fault finding, providing insight as well as explanations and documenting the code.
+
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\ssg_copilot_1.png" alt="ssg copilot image">

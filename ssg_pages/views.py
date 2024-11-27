@@ -10,7 +10,7 @@ Views:
 """
 
 from django.shortcuts import render
-# from ssg_blog.models import Post, Comment
+from ssg_blog.models import Post, Comment
 # from ssg_games.models import Game
 from .models import Team
 
@@ -38,15 +38,15 @@ def home(request):
     """
     # Fetch all team members, posts, comments, and games from the database
     team = Team.objects.all()
-    # post = Post.objects.all()
-    # comment = Comment.objects.all()
+    post = Post.objects.all()
+    comment = Comment.objects.all()
     # game = Game.objects.all()
     # Render the home page template with the fetched data
     return render(request, 'ssg_pages/home.html',
                   {
                       'team': team,
-                      #   'posts': post,
-                      #   'comments': comment,
+                      'posts': post,
+                      'comments': comment,
                       #   'games': game
                   },
                   )
@@ -98,29 +98,29 @@ def about(request):
                   )
 
 
-# def blog(request):
-#     """
-#     Renders the blog page with posts and comments.
+def blog(request):
+    """
+    Renders the blog page with posts and comments.
 
-#     **Context**
+    **Context**
 
-#     ``posts``
-#         A queryset of all blog posts.
-#     ``comments``
-#         A queryset of all comments.
+    ``posts``
+        A queryset of all blog posts.
+    ``comments``
+        A queryset of all comments.
 
-#     **Template:**
+    **Template:**
 
-#     :template:`ssg_blog/blog.html`
-#     """
-#     # Fetch all blog posts and comments from the database
-#     post = Post.objects.all()
-#     comment = Comment.objects.all()
-#     # Render the blog page template with the fetched data
-#     return render(
-#         request, 'ssg_blog/blog.html',
-#             {
-#                 'posts': post,
-#                 'comments': comment
-#             },
-#     )
+    :template:`ssg_blog/blog.html`
+    """
+    # Fetch all blog posts and comments from the database
+    post = Post.objects.all()
+    comment = Comment.objects.all()
+    # Render the blog page template with the fetched data
+    return render(
+        request, 'ssg_blog/blog.html',
+        {
+            'posts': post,
+            'comments': comment
+        },
+    )
