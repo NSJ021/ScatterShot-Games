@@ -41,8 +41,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',
-                 '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com',
+                 'brandmastermedia.com', 'www.brandmastermedia.com',
+                 'scattershotgames.com', 'www.scattershotgames.com']
 
 
 # Application definition
@@ -76,7 +77,12 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.facebook',
 ]
 
-SITE_ID = 1
+SITE_ID = 2
+
+# BrandMAster ID: 2
+# Scattershot ID: 3
+
+
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = '/'
 
