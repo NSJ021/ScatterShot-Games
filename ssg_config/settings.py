@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     # Custom Apps
     'ssg_pages',
     # 'ssg_games',
-    # 'ssg_blog',
+    'ssg_blog',
     # 'ssg_accounts',
     # 'ssg_contact',
     # Providers
