@@ -838,15 +838,42 @@ Brief reflection on the effectiveness of using AI tools for debugging and valida
 
 ### Deployment Process
 
+For the ScatterShot Web Application, Heroku is the deployment option of choice.
+Heroku has a few requirements that need to be setup to allow heroku to host properly.
+
+-   Procfile
+-   Requirements.txt
+-   Runtime.txt
+
+These 3 files tell Heroku what to do, how to do and with what basic settings.
+In order to deploy on Heroku firstly GitHub had to be linked to Heroku to allow the Repo be pulled from.
+Once linked to GitHub and a Repo selected. Heroku can attempt deployments based on the designated Repo.
+Heroku also requires all environment variables to be stored in the settings of the app, this allows Heroku to access all areas of the django project.
+Such as database url, cloudinary url, email settings etc.
+
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_heroku_1.png" alt="ssg heroku deployment image">
+<img src=".\ReadMe_Images\heroku_deploy_1.png" alt="ssg heroku deployment image">
 </P>
 <br>
 
-Briefly describe the deployment process to GitHub Pages or another cloud platform.  
-Mention any specific challenges encountered during deployment.  
-**Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\heroku_deploy_2.png" alt="ssg heroku deployment image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\heroku_deploy_3.png" alt="ssg heroku deployment image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\heroku_deploy_4.png" alt="ssg heroku deployment image">
+</P>
+<br>
 
 ## Code Attribution and Credit
 
