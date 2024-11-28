@@ -407,9 +407,8 @@ ul {
     background: #ff214f;
 }
 
-.content-area-4 {
-    padding: 100px 0 50px;
-    background: #4867aa;
+.content-area-nav {
+    background: #ffffff;
 }
 
 .content-area-5 {
@@ -689,7 +688,7 @@ ul {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-radius: 25px;
-    height: 65vh;
+    height: 75vh;
 }
 
 .featured-games-box .detail .game-creator {
@@ -737,10 +736,10 @@ ul {
     color: #343a40;
 }
 
-.featured-games-box .detail .location {
+.featured-games-box .detail .creator {
     margin-bottom: 15px;
 }
-.featured-games-box .detail .location a {
+.featured-games-box .detail .creator a {
     font-size: 14px;
 }
 
@@ -761,7 +760,7 @@ ul {
     background: rgba(0, 0, 0, 0.36);
 }
 
-.featured-games-box .facilities-list li {
+.featured-games-box .game-details-list li {
     list-style: none;
     float: left;
     margin: 0 3px 3px 0;
@@ -772,7 +771,7 @@ ul {
     border-radius: 3px;
 }
 
-.featured-games-box .facilities-list li i {
+.featured-games-box .game-details-list li i {
     font-weight: 500;
     font-size: 15px;
 }
@@ -795,7 +794,7 @@ ul {
     margin: 0 0 0 -4px;
 }
 
-.car-box-3 .footer ul li a {
+.featured-games-box .footer ul li a {
     display: block;
     font-size: 15px;
     height: inherit;
@@ -908,6 +907,68 @@ ul {
     transition: 0.5s;
 }
 
+/** Paginatin box **/
+.pagination-box {
+    margin-bottom: 25px;
+}
+
+.pagination {
+    padding-left: 0;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination > li > a {
+    color: #4d4d4d;
+    font-size: 18px;
+    background: #fff;
+    font-weight: 400;
+}
+
+.pagination > li > a i {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    margin: 0 2px 5px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-item:first-child .page-link {
+    border-radius: 0;
+}
+
+.pagination .page-item:last-child .page-link {
+    border-radius: 0;
+}
+
+.pagination > li > a:hover {
+    color: #fff;
+}
+
+.pagination > li > .active {
+    color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.page-link:focus {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 /** Main title start **/
 .main-title {
     margin-bottom: 50px;
@@ -937,7 +998,7 @@ ul {
 }
 
 .slick-slide-item {
-    padding: 0 60px !important;
+    padding: 0 20px !important;
 }
 
 .slick-arrow-buton {
@@ -1393,6 +1454,9 @@ footer {
 }
 
 @media (max-width: 992px) {
+    .featured-games-box {
+        height: 65vh;
+    }
     /* Content Areas */
     .content-area {
         padding: 80px 0 50px;
@@ -1538,5 +1602,13 @@ footer {
     .banner h2 {
         font-size: 34px;
         margin-bottom: 20px;
+    }
+
+    .slick-slide-item {
+        padding: 0 20px !important;
+    }
+
+    .featured-games-box {
+        height: 90vh;
     }
 }

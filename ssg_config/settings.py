@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # Custom Apps
     'ssg_pages',
-    # 'ssg_games',
+    'ssg_games',
     'ssg_blog',
     # 'ssg_accounts',
     # 'ssg_contact',

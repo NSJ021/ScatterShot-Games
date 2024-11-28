@@ -1,0 +1,123 @@
+{% extends 'base.html' %} {% block title %} | Games {% endblock %} {% block content %} {% load static %}
+
+<!-- Banner start -->
+<div class="banner" id="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner banner-slider-inner text-center">
+            <div class="carousel-item banner-max-height active item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/logos/logo.jpg' %}" alt="banner" />
+                <div class="carousel-content container banner-info-2 bi-2 text-left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner end -->
+
+<!-- Featured car start -->
+<div class="content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-title text-center">
+                    <h2><i class="fa-solid fa-dice"></i> <span>Game List</span> <i class="fa-solid fa-dice"></i></h2>
+                    <p>Checkout our Game Listings !</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    {% for game in games %}
+                    <div class="col-lg-6 col-md-6">
+                        <div class="featured-games-box">
+                            <div class="game-thumbnail">
+                                {% if "placeholder" in game.game_image_main.url %}
+                                <a href="{{ game.game_image_main.url }}">
+                                    <img class="d-block w-100" src="{% static 'img/logos/logo.webp' %}" alt="ScatterShot logo" style="min-height: 450px; max-height: 450px" />
+                                </a>
+                                {% else %}
+                                <a href="{{ game.game_image_main.url }}">
+                                    <img class="d-block w-100" src="{{ game.game_image_main.url }}" alt="main Game Image" style="min-height: 450px; max-height: 450px" />
+                                </a>
+                                {% endif %}
+                                <div class="game-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="game-magnify-gallery">
+                                                <a href="{{ game.game_image_main.url }}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{{ game.game_image_main.url }}" alt="{{ game.game_title }}" />
+                                                </a>
+                                                {% if game.game_image_2 %}
+                                                <a href="{{ game.game_image_2.url }}" class="hidden">
+                                                    <img class="hidden" src="{{ game.game_image_2.url }}" alt="{{ game.game_title }}" />
+                                                </a>
+                                                {% endif %} {% if game.game_image_3 %}
+                                                <a href="{{ game.game_image_3.url }}" class="hidden">
+                                                    <img class="hidden" src="{{ game.game_image_3.url }}" alt="{{ game.game_title }}" />
+                                                </a>
+                                                {% endif %} {% if game.game_image_4 %}
+                                                <a href="{{ game.game_image_4.url }}" class="hidden">
+                                                    <img class="hidden" src="{{ game.game_image_4.url }}" alt="{{ game.game_title }}" />
+                                                </a>
+                                                {% endif %} {% if game.game_image_5 %}
+                                                <a href="{{ game.game_image_5.url }}" class="hidden">
+                                                    <img class="hidden" src="{{ game.game_image_5.url }}" alt="{{ game.game_title }}" />
+                                                </a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="{% url 'game_detail' game.slug %}">{{ game.game_title }}</a>
+                                </h1>
+                                <div class="creator">
+                                    <a href="{% url 'game_detail' game.slug %}"> {{ game.creator}} </a>
+                                    <p>{{ game.created_on }}</p>
+                                    {{ game.game_brief | safe }}
+                                </div>
+                                <ul class="game-details-list clearfix">
+                                    <li>Players : {{ game.players }}</li>
+                                    <li>Play Time : {{ game.game_time }} Minutes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page navigation start -->
+<div class="pagination-box p-box-2 text-center">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            {% if games.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ games.previous_page_number }}"> <i class="fa fa-angle-left"></i></a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link"><i class="fa fa-angle-left"></i></a>
+            </li>
+            {% endif %} {% for page_num in games.paginator.page_range %} {% if games.number == page_num %}
+            <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+            {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+            {% endif %} {% endfor %} {% if games.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ games.next_page_number }}"> <i class="fa fa-angle-right"></i></a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link"><i class="fa fa-angle-right"></i></a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+{% endblock %}
