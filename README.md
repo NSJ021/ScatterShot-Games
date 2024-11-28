@@ -411,7 +411,7 @@ The below design choices were made to ensure the application is responisve acros
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_game_details.png" alt="ssg wireframe tablet image">
+<img src=".\ReadMe_Images\wireframe_tablet_games_details.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
@@ -473,7 +473,7 @@ The below design choices were made to ensure the application is responisve acros
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_game_details.png" alt="ssg wireframe phone image">
+<img src=".\ReadMe_Images\wireframe_phone_games_details.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
