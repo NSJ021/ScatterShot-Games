@@ -399,61 +399,61 @@ The below design choices were made to ensure the application is responisve acros
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_home.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_home.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_games.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_games.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_games_details.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_game_details.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_about.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_about.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_blog.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_blog.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_post_details.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_post_details.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_contact.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_contact.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_login.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_login.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_signup.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_signup.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_tablet_dashboard.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_tablet_dashboard.png" alt="ssg wireframe tablet image">
 </P>
 <br>
 
@@ -461,61 +461,61 @@ The below design choices were made to ensure the application is responisve acros
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_home.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_home.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_games.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_games.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_games_details.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_game_details.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_about.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_about.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_blog.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_blog.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_post_details.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_post_details.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_contact.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_contact.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_login.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_login.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_signup.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_signup.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\wireframe_phone_dashboard.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_phone_dashboard.png" alt="ssg wireframe phone image">
 </P>
 <br>
 
