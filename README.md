@@ -325,9 +325,13 @@ The team model is not linked to any other model via a relationship, as this func
 
 ### Wireframes
 
-Include wireframes for key sections of your website.  
-Briefly describe the design choices, including layout, colour schemes, and fonts.  
-**Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
+During the design process of the ScatterShot Web Application, wireframing took place for every page and across 3 view points.
+
+-   Desktop
+-   Tablet
+-   Mobile
+
+The below design choices were made to ensure the application is responisve across all 3 screen types and a well rounded application.
 
 #### Desktop Wireframes
 
