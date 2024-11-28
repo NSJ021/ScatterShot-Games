@@ -11,7 +11,7 @@ Views:
 
 from django.shortcuts import render
 from ssg_blog.models import Post, Comment
-# from ssg_games.models import Game
+from ssg_games.models import Game
 from .models import Team
 
 
@@ -40,39 +40,39 @@ def home(request):
     team = Team.objects.all()
     post = Post.objects.all()
     comment = Comment.objects.all()
-    # game = Game.objects.all()
+    game = Game.objects.all()
     # Render the home page template with the fetched data
     return render(request, 'ssg_pages/home.html',
                   {
                       'team': team,
                       'posts': post,
                       'comments': comment,
-                      #   'games': game
+                      'games': game,
                   },
                   )
 
 
-# def games(request):
-#     """
-#     Renders a list of all the games in the database.
+def games(request):
+    """
+    Renders a list of all the games in the database.
 
-#     **Context**
+    **Context**
 
-#     ``games``
-#         A queryset of all games.
+    ``games``
+        A queryset of all games.
 
-#     **Template:**
+    **Template:**
 
-#     :template:`ssg_games/games.html`
-#     """
-#     # Fetch all games from the database
-#     game = Game.objects.all()
-#     # Render the games page template with the fetched data
-#     return render(request, 'ssg_games/games.html',
-#         {
-#             'games': game
-#         },
-#     )
+    :template:`ssg_games/games.html`
+    """
+    # Fetch all games from the database
+    game = Game.objects.all()
+    # Render the games page template with the fetched data
+    return render(request, 'ssg_games/games.html',
+                  {
+                      'games': game
+                  },
+                  )
 
 
 def about(request):

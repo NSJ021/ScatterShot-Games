@@ -737,10 +737,10 @@ ul {
     color: #343a40;
 }
 
-.featured-games-box .detail .location {
+.featured-games-box .detail .creator {
     margin-bottom: 15px;
 }
-.featured-games-box .detail .location a {
+.featured-games-box .detail .creator a {
     font-size: 14px;
 }
 
@@ -761,7 +761,7 @@ ul {
     background: rgba(0, 0, 0, 0.36);
 }
 
-.featured-games-box .facilities-list li {
+.featured-games-box .game-details-list li {
     list-style: none;
     float: left;
     margin: 0 3px 3px 0;
@@ -772,7 +772,7 @@ ul {
     border-radius: 3px;
 }
 
-.featured-games-box .facilities-list li i {
+.featured-games-box .game-details-list li i {
     font-weight: 500;
     font-size: 15px;
 }
@@ -795,7 +795,7 @@ ul {
     margin: 0 0 0 -4px;
 }
 
-.car-box-3 .footer ul li a {
+.featured-games-box .footer ul li a {
     display: block;
     font-size: 15px;
     height: inherit;
