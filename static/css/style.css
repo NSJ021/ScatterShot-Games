@@ -998,7 +998,7 @@ ul {
 }
 
 .slick-slide-item {
-    padding: 0 60px !important;
+    padding: 0 20px !important;
 }
 
 .slick-arrow-buton {
@@ -1599,5 +1599,13 @@ footer {
     .banner h2 {
         font-size: 34px;
         margin-bottom: 20px;
+    }
+
+    .slick-slide-item {
+        padding: 0 20px !important;
+    }
+
+    .featured-games-box {
+        height: 90vh;
     }
 }
