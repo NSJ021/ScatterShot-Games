@@ -28,10 +28,10 @@
                     {% for game in games %}
                     <div class="col-lg-6 col-md-6">
                         <div class="featured-games-box">
-                            <div class="car-thumbnail">
+                            <div class="game-thumbnail">
                                 {% if "placeholder" in game.game_image_main.url %}
                                 <a href="{{ game.game_image_main.url }}">
-                                    <img class="d-block w-100" src="{% static 'img/logos/logo.jpg' %}" alt="ScatterShot logo" style="min-height: 450px; max-height: 450px" />
+                                    <img class="d-block w-100" src="{% static 'img/logos/logo.webp' %}" alt="ScatterShot logo" style="min-height: 450px; max-height: 450px" />
                                 </a>
                                 {% else %}
                                 <a href="{{ game.game_image_main.url }}">
