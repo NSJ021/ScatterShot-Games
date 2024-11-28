@@ -407,9 +407,8 @@ ul {
     background: #ff214f;
 }
 
-.content-area-4 {
-    padding: 100px 0 50px;
-    background: #4867aa;
+.content-area-nav {
+    background: #ffffff;
 }
 
 .content-area-5 {
@@ -906,6 +905,68 @@ ul {
     -webkit-transition: 0.5s;
     /* ...and now for the proper property */
     transition: 0.5s;
+}
+
+/** Paginatin box **/
+.pagination-box {
+    margin-bottom: 25px;
+}
+
+.pagination {
+    padding-left: 0;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination > li > a {
+    color: #4d4d4d;
+    font-size: 18px;
+    background: #fff;
+    font-weight: 400;
+}
+
+.pagination > li > a i {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    margin: 0 2px 5px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-item:first-child .page-link {
+    border-radius: 0;
+}
+
+.pagination .page-item:last-child .page-link {
+    border-radius: 0;
+}
+
+.pagination > li > a:hover {
+    color: #fff;
+}
+
+.pagination > li > .active {
+    color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.page-link:focus {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 /** Main title start **/
