@@ -329,21 +329,189 @@ Include wireframes for key sections of your website.
 Briefly describe the design choices, including layout, colour schemes, and fonts.  
 **Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
 
+#### Desktop Wireframes
+
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_wireframe_desktop.png" alt="ssg wireframe desktop image">
+<img src=".\ReadMe_Images\wireframe_desktop_home.png" alt="ssg wireframe desktop image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_wireframe_tablet.png" alt="ssg wireframe tablet image">
+<img src=".\ReadMe_Images\wireframe_desktop_games.png" alt="ssg wireframe desktop image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_wireframe_mobile.png" alt="ssg wireframe mobile image">
+<img src=".\ReadMe_Images\wireframe_desktop_games_details.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_desktop_about.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_desktop_blog.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_desktop_post_details.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_desktop_contact.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_desktop_login.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_desktop_signup.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_desktop_dashboard.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+#### Tablet Wireframes
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_home.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_games.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_games_details.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_about.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_blog.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_post_details.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_contact.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_login.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_signup.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_tablet_dashboard.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+#### Phone Wireframes
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_home.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_games.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_games_details.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_about.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_blog.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_post_details.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_contact.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_login.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_signup.png" alt="ssg wireframe desktop image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\wireframe_phone_dashboard.png" alt="ssg wireframe desktop image">
 </P>
 <br>
 
