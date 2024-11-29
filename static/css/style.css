@@ -503,6 +503,12 @@ button:focus {
     padding: 100px 0px 0px;
 }
 
+/* Messsage */
+
+#message {
+    padding: 30px 0px;
+}
+
 /* Content Areas */
 
 .content-area {
@@ -1092,7 +1098,7 @@ button:focus {
 .main-title h1 {
     font-size: 33px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin: 25px 0px;
 }
 
 .main-title h2 {
