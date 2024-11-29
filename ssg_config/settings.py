@@ -103,6 +103,8 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+X_FRAME_OPTIONS = 'ALLOWALL'
+
 ROOT_URLCONF = 'ssg_config.urls'
 
 TEMPLATES = [
