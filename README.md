@@ -543,6 +543,8 @@ Colour contrast was considered during the colour scheme selection. Details are s
 
 #### Fonts
 
+Robotto is one of the chosen Fonts used for this project.
+
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\ssg_font_1.png" alt="ssg font image">
@@ -562,9 +564,6 @@ Colour contrast was considered during the colour scheme selection. Details are s
 <img src=".\ReadMe_Images\ssg_lighthose_2.png" alt="ssg lighthouse score image">
 </P>
 <br>
-
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
 ## Features Implementation
 
@@ -775,7 +774,7 @@ Mention any issues found and how they were resolved.
 -   <strong>Bug 1</strong>: Issues when adding to a model on the deployed site, where cloudinary is used alognside the summernote editor.
 -   <strong>Fix</strong>: Cloudinary variable were not set correctly on heroku, DEBUG mode in Django helped figure out which variable was incorrect.
 
--   <strong>Bug 2</strong>:
+-   <strong>Bug 2</strong>: Issues with Facebook and Google Logins on the deployed
 -   <strong>Fix</strong>:
 
 -   <strong>Bug 3</strong>:
@@ -830,9 +829,6 @@ Generally speaking Copilot was primarily used for fault finding, providing insig
 <img src=".\ReadMe_Images\ssg_copilot_1.png" alt="ssg copilot image">
 </P>
 <br>
-
-Brief reflection on the effectiveness of using AI tools for debugging and validation.  
-**Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
 
 ## Deployment
 
