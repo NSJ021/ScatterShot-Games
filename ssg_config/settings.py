@@ -73,8 +73,8 @@ INSTALLED_APPS = [
     'ssg_accounts',
     # 'ssg_contact',
     # Providers
-    # 'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 SITE_ID = 2
