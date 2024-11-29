@@ -80,7 +80,7 @@
                     <!-- User Login Links -->
 
                     <!-- Check is user authenticated, Show User Dashboard and logout links -->
-                    {% comment %} {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
                     <li class='nav-item'>
                         <a class="nav-link" href="{% url 'dashboard' %}" class="sign-in nav-link"><i class="fa fa-user"></i> Dashboard</a>
                     </li>
@@ -91,10 +91,10 @@
                             {% csrf_token %}
                             <input type="hidden">
                         </form>
-                    </li> {% endcomment %}
+                    </li>
 
                     <!-- Else: show login and signup links -->
-                    {% comment %} {% else %}
+                    {% else %}
                         <li class='nav-item'>
                         <a                        
                         {% if '/accounts/login' == request.path %}
@@ -114,7 +114,7 @@
                         {% endif %} 
                         href="{% url 'signup' %}"><i class="fa fa-user"></i> Register</a>
                     </li>
-                    {% endif %} {% endcomment %}
+                    {% endif %}
 
                 </ul>
             </div>
