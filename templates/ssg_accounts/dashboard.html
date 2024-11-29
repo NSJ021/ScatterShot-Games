@@ -19,11 +19,31 @@
 
     <div class="main-title" style="text-align: left !important">
         <h1>Welcome <span>{{ request.user.username }}</span></h1>
-        <p>Check out your recent activity on the ScatterShot Games</p>
+        <p>Check out your recent activity on the ScatterShot Games, and change your details.</p>
         <!-- Add Admin Panel Button for Superusers -->
         {% if is_superuser %}
         <a href="/admin/" class="btn btn-primary mb-4">Go to Admin Panel</a>
         {% endif %}
+
+        <br />
+
+        <!-- Change Username Form -->
+        <form method="post" action="{% url 'dashboard' %}">
+            {% csrf_token %} {{ username_form.as_p }}
+            <button class="btn btn-primary mb-4" type="submit" name="username">Change Username</button>
+        </form>
+
+        <!-- Change Email Form -->
+        <form method="post" action="{% url 'dashboard' %}">
+            {% csrf_token %} {{ email_form.as_p }}
+            <button class="btn btn-primary mb-4" type="submit" name="email">Change Email</button>
+        </form>
+
+        <!-- Change Password Form -->
+        <form method="post" action="{% url 'dashboard' %}">
+            {% csrf_token %} {{ password_form.as_p }}
+            <button class="btn btn-primary mb-4" type="submit" name="password">Change Password</button>
+        </form>
     </div>
 
     <!-- User Messages Section -->
