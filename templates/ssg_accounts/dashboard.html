@@ -1,0 +1,133 @@
+{% extends 'base.html' %} {% block title %} | Dashboard {% endblock %} {% block content %} {% load static %}
+
+<!-- Dashboard start -->
+<!-- Banner start -->
+<div class="banner" id="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner banner-slider-inner text-center">
+            <div class="carousel-item banner-max-height active item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/logos/logo.jpg' %}" alt="banner" />
+                <div class="carousel-content container banner-info-2 bi-2 text-left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner end -->
+
+<div class="container mt-50 mb-50">
+    {% include 'includes/messages.html' %}
+
+    <div class="main-title" style="text-align: left !important">
+        <h1>Welcome <span>{{ request.user.username }}</span></h1>
+        <p>Check out your recent activity on the ScatterShot Games</p>
+        <!-- Add Admin Panel Button for Superusers -->
+        {% if is_superuser %}
+        <a href="/admin/" class="btn btn-primary mb-4">Go to Admin Panel</a>
+        {% endif %}
+    </div>
+
+    <!-- User Messages Section -->
+    {% comment %}
+    <div class="table-responsive">
+        <h2>Your <span>Messages</span></h2>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Created On</th>
+                    <th>Read</th>
+                    <th>Replied</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if user_messages %} {% for message in user_messages %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ message.name }}</td>
+                    <td>{{ message.subject }}</td>
+                    <td>{{ message.message }}</td>
+                    <td>{{ message.created_on }}</td>
+                    <td>{% if message.message_read %} Yes {% else %} No {% endif %}</td>
+                    <td>{% if message.message_replied %} Yes {% else %} No {% endif %}</td>
+                </tr>
+                {% endfor %} {% else %}
+                <tr>
+                    <td colspan="7">No messages found</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+    {% endcomment %}
+
+    <!-- Blog Comments Section -->
+    <div class="table-responsive">
+        <h2>Your <span>Blog</span> Comments</h2>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Post Title</th>
+                    <th>Comment</th>
+                    <th>Created On</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if blog_comments %} {% for comment in blog_comments %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ comment.post.title }}</td>
+                    <td>{{ comment.body }}</td>
+                    <td>{{ comment.created_on }}</td>
+                    <td>
+                        <a href="{% url 'post_detail' comment.post.slug %}#comment-{{ comment.id }}" class="btn btn-primary btn-sm">View</a>
+                    </td>
+                </tr>
+                {% endfor %} {% else %}
+                <tr>
+                    <td colspan="5">No comments found</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Game Comments Section -->
+    <div class="table-responsive mt-4">
+        <h2>Your <span>Game</span> Comments</h2>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Game Title</th>
+                    <th>Comment</th>
+                    <th>Created On</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if game_comments %} {% for comment in game_comments %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ comment.game.game_title }}</td>
+                    <td>{{ comment.body }}</td>
+                    <td>{{ comment.created_on }}</td>
+                    <td>
+                        <a href="{% url 'game_detail' comment.game.slug %}#comment-{{ comment.id }}" class="btn btn-primary btn-sm">View</a>
+                    </td>
+                </tr>
+                {% endfor %} {% else %}
+                <tr>
+                    <td colspan="5">No comments found</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Dashboard end -->
+{% endblock %}
