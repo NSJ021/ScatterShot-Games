@@ -155,21 +155,3 @@ def dashboard(request):
         'password_form': password_form,
     }
     return render(request, 'ssg_accounts/dashboard.html', context)
-
-
-# @login_required
-# def change_username(request):
-#     if request.method == 'POST':
-#         form = UsernameChangeForm(request.POST)
-#         if form.is_valid():
-#             new_username = form.cleaned_data['new_username']
-#             try:
-#                 request.user.username = new_username
-#                 request.user.save()
-#                 messages.success(request, 'Username successfully changed!')
-#             except Exception as e:
-#                 messages.error(request, f'Failed to change username: {e}')
-#             return redirect('dashboard')
-#     else:
-#         form = UsernameChangeForm()
-#     return render(request, 'change_username.html', {'form': form})
