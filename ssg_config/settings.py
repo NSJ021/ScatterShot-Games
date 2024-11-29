@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'ssg_pages',
     'ssg_games',
     'ssg_blog',
-    # 'ssg_accounts',
+    'ssg_accounts',
     # 'ssg_contact',
     # Providers
     # 'allauth.socialaccount.providers.google',
