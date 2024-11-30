@@ -10,7 +10,7 @@ from .forms import UsernameChangeForm, EmailChangeForm
 from .forms import CustomPasswordChangeForm
 from ssg_blog.models import Comment as BlogComment
 from ssg_games.models import Comment as GameComment
-# from ssg_contact.models import UserMessage
+from ssg_contact.models import UserMessage
 
 # Create your views here.
 
@@ -143,12 +143,12 @@ def dashboard(request):
         author=request.user).select_related('post')
     game_comments = GameComment.objects.filter(
         author=request.user).select_related('game')
-    # user_messages = UserMessage.objects.filter(user_id=request.user)
+    user_messages = UserMessage.objects.filter(user_id=request.user)
 
     context = {
         'blog_comments': blog_comments,
         'game_comments': game_comments,
-        # 'user_messages': user_messages,
+        'user_messages': user_messages,
         'is_superuser': request.user.is_superuser,
         'username_form': username_form,
         'email_form': email_form,
