@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import UserMessage
+from django.conf import os
 
 
 # Create your views here.
@@ -28,6 +29,72 @@ def user_contact(request):
                                   name=name, email=email, subject=subject,
                                   phone_number=phone_number,
                                   message=message)
+
+        # Send email to admin
+        # Retrieve all superuser emails
+        admin_emails = list(User.objects.filter(
+            is_superuser=True).values_list('email', flat=True))
+
+        # Email details
+        admin_message = f"""
+                Hello Admin,
+
+                You have received a new message,
+                from a user of ScatterShot Games.
+
+                Details of the message:
+                - Name: {name}
+                - Email: {email}
+                - Subject: {subject}
+                - Phone Number: {phone_number}
+
+                Message:
+                {message}
+
+                Please check the User Messages Section,
+                Located within the admin panel for more details.
+
+                Best regards,
+                Team ScatterShot
+                """
+
+        # Send email
+        send_mail(
+            subject,
+            admin_message,
+            os.environ.get('EMAIL_HOST_USER'),  # Sender Address
+            admin_emails,  # Recipient List
+            fail_silently=False,
+        )
+
+        # Email details for user
+        user_message = f"""
+                Hello {name},
+
+                Thank you for contacting ScatterShot Games.
+
+                We have received your message,
+                We will get back to you as soon as possible.
+
+                Details of your message:
+                - Subject: {subject}
+                - Phone Number: {phone_number}
+
+                Message:
+                {message}
+
+                Best regards,
+                Team ScatterShot
+                """
+
+        # Send email to user
+        send_mail(
+            'Thank you for contacting ScatterShot Games',
+            user_message,
+            os.environ.get('EMAIL_HOST_USER'),  # Sender Address
+            [email],  # Recipient List
+            fail_silently=False,
+        )
 
         # Save the message
         new_contact.save()
