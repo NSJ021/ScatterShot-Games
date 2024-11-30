@@ -1,0 +1,126 @@
+{% extends 'base.html' %} {% block title %} | Contact {% endblock %} {% block content %} {% load static %}
+
+<!-- Contact start -->
+
+<!-- Banner start -->
+<div class="banner" id="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner banner-slider-inner text-center">
+            <div class="carousel-item banner-max-height active item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/logos/logo.jpg' %}" alt="banner" />
+                <div class="carousel-content container banner-info-2 bi-2 text-left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner end -->
+
+<!-- Contact 2 start -->
+<div class="contact-section content-area-5">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title text-center">
+            <!-- Add a message to the user -->
+            {% include 'includes/messages.html' %}
+            <h2><i class="fa-solid fa-message"></i> <span>Get In Touch</span> <i class="fa-solid fa-message"></i></h2>
+            <p>
+                Got an idea for a game? <br />
+                Want to more information on ScatterShot and our Games? <br />
+                Get In Touch Below!
+            </p>
+        </div>
+        <!-- Contact form -->
+        <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+            <!-- Add CSRF Token -->
+            {% csrf_token %}
+            <!-- Add User ID if user is authenticated -->
+            {% if user.is_authenticated %}
+            <!-- Add a hidden input field to store the user ID -->
+            <input type="hidden" name="user" value="{{ user.id }}" />
+            {% else %}
+            <input type="hidden" name="user" value="0" />
+            {% endif %}
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <div class="form-group name">
+                                <!-- Check if the user is authenticated and add their name to the form -->
+                                {% if user.is_authenticated %}
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" value="{{ user.first_name }} {{ user.last_name }}" required />
+                                {% else %}
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" required />
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group email">
+                                <!-- Check if the user is authenticated and add their email to the form -->
+                                {% if user.is_authenticated %}
+                                <input type="email" name="email" class="form-control" placeholder="Email" value="{{ user.email }} " required />
+                                {% else %}
+                                <input type="email" name="email" class="form-control" placeholder="Email" required />
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group subject">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group number">
+                                <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group message">
+                                <textarea class="form-control" name="message" placeholder="Write message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="send-btn text-center">
+                                <button type="submit" class="btn btn-md btn-theme">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <div class="ci-box">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>Email:</h5>
+                                <p><a href="mailto:Scattershotgames@outlook.com">Scattershotgames@outlook.com</a></p>
+                            </div>
+                        </div>
+                        <div class="ci-box">
+                            <div class="icon">
+                                <i class="fa-brands fa-itch-io"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>Itch.io:</h5>
+                                <p><a href="https://scattershot-games.itch.io/">ScatterShot Itch.io</a></p>
+                            </div>
+                        </div>
+                        <div class="ci-box mb-0">
+                            <div class="icon">
+                                <i class="fa-brands fa-kickstarter"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>Kickstarter:</h5>
+                                <p><a href="https://www.kickstarter.com/profile/scattershot-games/created?ref=nav_search&result=user&term=scattershot&total_hits=0">ScatterShot Kickstarter</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Contact end -->
+
+{% endblock %}
