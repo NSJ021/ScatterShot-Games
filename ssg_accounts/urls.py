@@ -8,8 +8,6 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from . import views
 
-from .views import test_password_reset_token
-
 app_name = 'ssg_accounts'
 
 urlpatterns = [
@@ -24,7 +22,7 @@ urlpatterns = [
         'password_reset/',
         auth_views.PasswordResetView.as_view(
             template_name='ssg_accounts/password_reset_form.html',
-            email_template_name='ssg_accounts/password_reset_email.html',  # Custom email template
+            email_template_name='ssg_accounts/password_reset_email.html',
             success_url='/accounts/password_reset/done/',
         ),
         name='password_reset',
@@ -51,6 +49,7 @@ urlpatterns = [
         name='password_reset_complete',
     ),
 
-    path('test_reset_token/<uidb64>/<token>/', views.test_password_reset_token, name='test_reset_token'),
+    path('test_reset_token/<uidb64>/<token>/',
+         views.test_password_reset_token, name='test_reset_token'),
 
 ]

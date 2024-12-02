@@ -83,7 +83,7 @@ SITE_ID = 3
 # Scattershot ID: 4
 
 
-LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_REDIRECT_URL = 'ssg_accounts:dashboard'
 LOGOUT_REDIRECT_URL = '/'
 
 SOCIALACCOUNT_LOGIN_ON_GET = True

@@ -28,19 +28,19 @@
         <br />
 
         <!-- Change Username Form -->
-        <form method="post" action="{% url 'dashboard' %}">
+        <form method="post" action="{% url 'ssg_accounts:dashboard' %}">
             {% csrf_token %} {{ username_form.as_p }}
             <button class="btn btn-primary mb-4" type="submit" name="username">Change Username</button>
         </form>
 
         <!-- Change Email Form -->
-        <form method="post" action="{% url 'dashboard' %}">
+        <form method="post" action="{% url 'ssg_accounts:dashboard' %}">
             {% csrf_token %} {{ email_form.as_p }}
             <button class="btn btn-primary mb-4" type="submit" name="email">Change Email</button>
         </form>
 
         <!-- Change Password Form -->
-        <form method="post" action="{% url 'dashboard' %}">
+        <form method="post" action="{% url 'ssg_accounts:dashboard' %}">
             {% csrf_token %} {{ password_form.as_p }}
             <button class="btn btn-primary mb-4" type="submit" name="password">Change Password</button>
         </form>
