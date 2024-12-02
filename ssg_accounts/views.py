@@ -11,6 +11,7 @@ from .forms import CustomPasswordChangeForm
 from ssg_blog.models import Comment as BlogComment
 from ssg_games.models import Comment as GameComment
 from ssg_contact.models import UserMessage
+from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
 
@@ -48,7 +49,7 @@ def signup(request):
                     # Login after register
                     auth.login(request, user)
                     messages.success(request, 'You are now logged in')
-                    return redirect('dashboard')
+                    return redirect('ssg_accounts:dashboard')
         else:
             messages.error(request, 'Passwords do not match')
             return redirect('signup')
@@ -58,6 +59,9 @@ def signup(request):
 # Login view
 
 
+
+
+@csrf_protect
 def login(request):
     """
     View for logging in the user.
@@ -70,7 +74,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             messages.success(request, 'You are now logged in')
-            return redirect('dashboard')
+            return redirect('ssg_accounts:dashboard')
         else:
             messages.error(request, 'Invalid credentials')
             return redirect('login')
