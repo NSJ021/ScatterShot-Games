@@ -157,11 +157,13 @@ def dashboard(request):
     }
     return render(request, 'ssg_accounts/dashboard.html', context)
 
+
 def password_reset(request):
     """
     View for resetting the user password.
     """
     return render(request, 'ssg_accounts/password_reset.html')
+
 
 def password_reset_done(request):
     """
