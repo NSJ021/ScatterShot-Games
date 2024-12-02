@@ -83,7 +83,12 @@
                     <!-- Check is user authenticated, Show User Dashboard and logout links -->
                     {% if user.is_authenticated %}
                     <li class='nav-item'>
-                        <a class="nav-link" href="{% url 'ssg_accounts:dashboard' %}" class="sign-in nav-link"><i class="fa fa-user"></i> Dashboard</a>
+                        <a 
+                        {% if '/accounts/dashboard/' == request.path %}
+                        class="nav-link active sign-in"
+                        {% else %} 
+                        class="nav-link sign-in"
+                        {% endif %} href="{% url 'ssg_accounts:dashboard' %}" class="sign-in nav-link"><i class="fa fa-user"></i> Dashboard</a>
                     </li>
 
                     <li class='nav-item'>
@@ -98,7 +103,7 @@
                     {% else %}
                         <li class='nav-item'>
                         <a                        
-                        {% if '/accounts/login' == request.path %}
+                        {% if '/accounts/login/' == request.path %}
                         class="nav-link active sign-in"
                         {% else %} 
                         class="nav-link sign-in"
@@ -108,7 +113,7 @@
 
                     <li class='nav-item'>
                         <a                        
-                        {% if '/accounts/signup' == request.path %}
+                        {% if '/accounts/signup/' == request.path %}
                         class="nav-link active sign-in"
                         {% else %} 
                         class="nav-link sign-in"
