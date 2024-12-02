@@ -59,8 +59,6 @@ def signup(request):
 # Login view
 
 
-
-
 @csrf_protect
 def login(request):
     """
@@ -180,6 +178,7 @@ from django.http import JsonResponse
 from django.utils.http import urlsafe_base64_decode
 from django.contrib.auth.models import User
 from django.contrib.auth.tokens import default_token_generator
+
 
 def test_password_reset_token(request, uidb64, token):
     try:
