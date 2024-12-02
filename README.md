@@ -313,7 +313,7 @@ This functionality highlights the <strong>CRUD</strong> abilities within the pro
 A brief description of the relationships are as follows:
 
 User from User Model is always a 1 to 1 relationship.
-Every Game can have many comments, but a comment can only belong to a single game
+Every Game can have many comments, but a comment can only belong to a single game.
 Every Blog Post can have many comments, but a comment can only belong to a single post.
 A User can send many messages, but a message can only belong to one user.
 The team model is not linked to any other model via a relationship, as this functionality was not required for this project.
@@ -543,6 +543,8 @@ Colour contrast was considered during the colour scheme selection. Details are s
 
 #### Fonts
 
+Robotto is one of the chosen Fonts used for this project.
+
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\ssg_font_1.png" alt="ssg font image">
@@ -562,9 +564,6 @@ Colour contrast was considered during the colour scheme selection. Details are s
 <img src=".\ReadMe_Images\ssg_lighthose_2.png" alt="ssg lighthouse score image">
 </P>
 <br>
-
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
 ## Features Implementation
 
@@ -773,13 +772,13 @@ Mention any issues found and how they were resolved.
 ### Bugs
 
 -   <strong>Bug 1</strong>: Issues when adding to a model on the deployed site, where cloudinary is used alognside the summernote editor.
--   <strong>Fix</strong>: Cloudinary variable were not set correctly on heroku, DEBUG mode in Django helped figure out which variable was incorrect.
+-   <strong>Fix</strong>: Cloudinary variables were not set correctly on heroku, DEBUG mode in Django helped figure out which variable was incorrect.
 
--   <strong>Bug 2</strong>:
--   <strong>Fix</strong>:
+-   <strong>Bug 2</strong>: Issues with Facebook and Google Logins on the deployed sites.
+-   <strong>Fix</strong>: Additional callback URLs needed to be added to the appropriate app in Facebook Developers and Google Developers.
 
--   <strong>Bug 3</strong>:
--   <strong>Fix</strong>:
+-   <strong>Bug 3</strong>: Cloudinary returns HTTP responce rather than HTTPS which causes a console error.
+-   <strong>Fix</strong>: Cloudinary will need to update there type of responce given when an image is fetched.
 
 -   <strong>Bug 4</strong>:
 -   <strong>Fix</strong>:
@@ -830,9 +829,6 @@ Generally speaking Copilot was primarily used for fault finding, providing insig
 <img src=".\ReadMe_Images\ssg_copilot_1.png" alt="ssg copilot image">
 </P>
 <br>
-
-Brief reflection on the effectiveness of using AI tools for debugging and validation.  
-**Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
 
 ## Deployment
 
