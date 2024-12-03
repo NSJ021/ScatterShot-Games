@@ -513,18 +513,18 @@ button:focus {
 
 .content-area {
     padding: 100px 0 70px;
-    background: #fede07;
+    background: #b1eda5;
 }
 
 .content-area-2 {
     padding: 100px 0px;
 
-    background: #fe7e07;
+    background: #77de79;
 }
 
 .content-area-3 {
     margin-bottom: 70px;
-    background: #ff214f;
+    background: #3bca58;
 }
 
 .content-area-nav {
@@ -1359,7 +1359,7 @@ button:focus {
 }
 
 .signup-section .form-section p {
-    margin-bottom: 0;
+    margin-bottom: 25px;
     text-align: center;
     font-size: 15px;
 }
@@ -1507,7 +1507,7 @@ button:focus {
 
 .signup-section .form-section .btn-md {
     cursor: pointer;
-    padding: 14.5px 50px 13.5px 50px;
+    padding: 14.5px 15px 13.5px 15px;
     font-size: 15px;
     font-weight: 400;
     border-radius: 25px;
