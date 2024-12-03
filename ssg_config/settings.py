@@ -77,7 +77,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
 ]
 
-SITE_ID = 3
+SITE_ID = 4
 
 # BrandMaster ID: 3
 # Scattershot ID: 4
