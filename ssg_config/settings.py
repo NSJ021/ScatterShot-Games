@@ -20,11 +20,11 @@ import dj_database_url
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.path.isfile('env.py'):
-    import env
-    DEBUG = True
-else:
-    DEBUG = False
+# if os.path.isfile('env.py'):
+#     import env
+#     DEBUG = True
+# else:
+DEBUG = True
 
 # DEBUG = True
 
