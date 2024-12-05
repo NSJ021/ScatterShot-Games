@@ -39,7 +39,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com',
-                 'brandmastermedia.com', 'www.brandmastermedia.com',
                  'scattershotgames.com', 'www.scattershotgames.com']
 
 
@@ -76,7 +75,6 @@ INSTALLED_APPS = [
 
 SITE_ID = 4
 
-# BrandMaster ID: 3
 # Scattershot ID: 4
 
 
@@ -139,7 +137,7 @@ if 'test' in sys.argv:
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', 
     },
     {
         'NAME':
@@ -200,7 +198,9 @@ SUMMERNOTE_CONFIG = {
     'cloudinary_storage.storage.MediaCloudinaryStorage',
 
     'attachment_url':
-    'https://res.cloudinary.com/dt5yygt6j/raw/upload/{filename}',
+    'https://res.cloudinary.com/'
+    + os.environ.get('CLOUDINARY_CLOUD_NAME') +
+    '/raw/upload/%7Bfilename%7D',
 
     'attachment_upload_to':
     'Scattershot-summernote/',
