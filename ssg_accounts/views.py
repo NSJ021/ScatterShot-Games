@@ -13,6 +13,7 @@ from ssg_games.models import Comment as GameComment
 from ssg_contact.models import UserMessage
 from django.views.decorators.csrf import csrf_protect
 
+
 # Create your views here.
 
 
@@ -172,28 +173,3 @@ def password_reset_done(request):
     View for password reset done.
     """
     return render(request, 'ssg_accounts/password_reset_done.html')
-
-
-from django.http import JsonResponse
-from django.utils.http import urlsafe_base64_decode
-from django.contrib.auth.models import User
-from django.contrib.auth.tokens import default_token_generator
-
-
-def test_password_reset_token(request, uidb64, token):
-    try:
-        # Decode the uidb64 to get the user ID
-        uid = urlsafe_base64_decode(uidb64).decode()
-
-        # Get the user from the decoded UID
-        user = User.objects.get(pk=uid)
-
-        # Validate the token
-        is_valid = default_token_generator.check_token(user, token)
-
-        return JsonResponse({
-            'username': user.username,
-            'is_valid': is_valid,
-        })
-    except User.DoesNotExist:
-        return JsonResponse({'error': 'User not found'}, status=404)
