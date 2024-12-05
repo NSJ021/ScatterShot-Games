@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-
 import os
 import sys
 from django.contrib.messages import constants as messages
@@ -26,7 +25,6 @@ if os.path.isfile('env.py'):
     DEBUG = True
 else:
     DEBUG = False
-
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

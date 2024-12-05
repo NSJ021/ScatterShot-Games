@@ -525,14 +525,13 @@ button:focus {
 }
 
 .content-area-2 {
-    padding: 100px 0px;
+    padding: 50px 0px;
 
     background: var(--midlightgreen);
 }
 
 .content-area-3 {
     margin-top: 50px;
-    margin-bottom: 70px;
     background: var(--green);
 }
 
@@ -1102,6 +1101,7 @@ button:focus {
 .main-title {
     margin-bottom: 50px;
     text-align: center;
+    padding-top: 30px;
 }
 
 .main-title h1 {
@@ -1727,7 +1727,7 @@ input[type='radio'] {
     font-size: 27px;
     margin: 0;
     line-height: 50px;
-    color: #000;
+    color: #fff;
     font-weight: 300;
 }
 
