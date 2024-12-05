@@ -1,0 +1,231 @@
+.brand {
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4a4a4f;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.light-bg {
+    background-color: #fff;
+}
+
+.dark-bg {
+    background-color: #445261;
+}
+
+.main-bg {
+    background-color: #64d362;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.card-title {
+    padding-top: 20px;
+    color: #000000;
+}
+
+.card-img-top {
+    border-radius: 25px;
+}
+
+.card-body {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 15px;
+}
+
+.comments {
+    border: #000000 1px solid;
+    border-radius: 25px;
+    padding: 1rem !important;
+    margin: 10px auto;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #d93333;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.masthead {
+    margin-top: 40px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 35vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #10a629;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #10a629;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #445261;
+}
+
+.post-link:hover,
+.page-link {
+    color: #e84610;
+}
+
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-signup,
+.btn-edit {
+    margin-top: 20px;
+    background-color: #188181;
+    color: #fff;
+}
+
+.btn-delete {
+    margin-top: 20px;
+    color: #fff;
+    background: #e84610;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-edit:hover,
+.btn-edit:active {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-delete:hover,
+.btn-delete:active {
+    background-color: transparent;
+    color: #fff;
+}
+
+.link {
+    color: #23bbbb;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.faded {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.approval {
+    color: rgba(255, 0, 72, 0.7);
+}
+
+.text-muted {
+    color: #23282e !important;
+}
+
+.text-secondary {
+    color: #000000 !important;
+}
+
+@media (min-width: 992px) {
+    .masthead {
+        height: 45vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .masthead {
+        height: 30vh;
+    }
+    .author {
+        display: none;
+    }
+    .card-body {
+        padding: 20px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .masthead {
+        height: 25vh;
+    }
+    .author {
+        display: flex;
+    }
+
+    .card-body {
+        padding: 20px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .masthead {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 360px) {
+    .masthead {
+        height: 20vh;
+    }
+}

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+import env
 import os
 import sys
 from django.contrib.messages import constants as messages
@@ -20,13 +21,13 @@ import dj_database_url
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.path.isfile('env.py'):
-    import env
-    DEBUG = True
-else:
-    DEBUG = False
+# if os.path.isfile('env.py'):
+#     import env
+#     DEBUG = True
+# else:
+DEBUG = False
 
-# DEBUG = True
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,8 +39,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com',
                  'brandmastermedia.com', 'www.brandmastermedia.com',
@@ -216,6 +215,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
