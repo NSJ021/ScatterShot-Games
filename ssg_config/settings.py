@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-import env
+
 import os
 import sys
 from django.contrib.messages import constants as messages
@@ -21,11 +21,11 @@ import dj_database_url
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# if os.path.isfile('env.py'):
-#     import env
-#     DEBUG = True
-# else:
-DEBUG = False
+if os.path.isfile('env.py'):
+    import env
+    DEBUG = True
+else:
+    DEBUG = False
 
 
 
