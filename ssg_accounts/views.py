@@ -10,9 +10,12 @@ from .forms import UsernameChangeForm, EmailChangeForm
 from .forms import CustomPasswordChangeForm
 from ssg_blog.models import Comment as BlogComment
 from ssg_games.models import Comment as GameComment
-# from ssg_contact.models import UserMessage
+from ssg_contact.models import UserMessage
+from django.views.decorators.csrf import csrf_protect
+
 
 # Create your views here.
+
 
 # Signup view
 
@@ -47,7 +50,7 @@ def signup(request):
                     # Login after register
                     auth.login(request, user)
                     messages.success(request, 'You are now logged in')
-                    return redirect('dashboard')
+                    return redirect('ssg_accounts:dashboard')
         else:
             messages.error(request, 'Passwords do not match')
             return redirect('signup')
@@ -57,6 +60,7 @@ def signup(request):
 # Login view
 
 
+@csrf_protect
 def login(request):
     """
     View for logging in the user.
@@ -69,7 +73,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             messages.success(request, 'You are now logged in')
-            return redirect('dashboard')
+            return redirect('ssg_accounts:dashboard')
         else:
             messages.error(request, 'Invalid credentials')
             return redirect('login')
@@ -143,15 +147,29 @@ def dashboard(request):
         author=request.user).select_related('post')
     game_comments = GameComment.objects.filter(
         author=request.user).select_related('game')
-    # user_messages = UserMessage.objects.filter(user_id=request.user)
+    user_messages = UserMessage.objects.filter(user_id=request.user)
 
     context = {
         'blog_comments': blog_comments,
         'game_comments': game_comments,
-        # 'user_messages': user_messages,
+        'user_messages': user_messages,
         'is_superuser': request.user.is_superuser,
         'username_form': username_form,
         'email_form': email_form,
         'password_form': password_form,
     }
     return render(request, 'ssg_accounts/dashboard.html', context)
+
+
+def password_reset(request):
+    """
+    View for resetting the user password.
+    """
+    return render(request, 'ssg_accounts/password_reset.html')
+
+
+def password_reset_done(request):
+    """
+    View for password reset done.
+    """
+    return render(request, 'ssg_accounts/password_reset_done.html')

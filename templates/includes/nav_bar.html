@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!-- Main header start -->
 
 <header class="main-header sticky-header header-with-top content-area-nav">
@@ -65,7 +66,7 @@
                         </a>
                     </li>
 
-                    {% comment %} <li class='nav-item'>
+                    <li class='nav-item'>
                         <a                        
                         {% if request.resolver_match.url_name == 'contact' %}
                         class="nav-link active"
@@ -75,19 +76,24 @@
                         href="{% url 'contact' %}"><i class="fa-solid fa-message"></i>
                          Contact
                         </a>
-                    </li> {% endcomment %}
+                    </li>
 
                     <!-- User Login Links -->
 
                     <!-- Check is user authenticated, Show User Dashboard and logout links -->
                     {% if user.is_authenticated %}
                     <li class='nav-item'>
-                        <a class="nav-link" href="{% url 'dashboard' %}" class="sign-in nav-link"><i class="fa fa-user"></i> Dashboard</a>
+                        <a 
+                        {% if '/accounts/dashboard/' == request.path %}
+                        class="nav-link active sign-in"
+                        {% else %} 
+                        class="nav-link sign-in"
+                        {% endif %} href="{% url 'ssg_accounts:dashboard' %}" class="sign-in nav-link"><i class="fa fa-user"></i> Dashboard</a>
                     </li>
 
                     <li class='nav-item'>
                         <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}" class="sign-out nav-link"><i class="fa fa-sign-out"></i> Logout</a>
-                        <form action="{% url 'logout' %}" method="POST" id="logout">
+                        <form action="{% url 'ssg_accounts:logout' %}" method="POST" id="logout">
                             {% csrf_token %}
                             <input type="hidden">
                         </form>
@@ -97,22 +103,22 @@
                     {% else %}
                         <li class='nav-item'>
                         <a                        
-                        {% if '/accounts/login' == request.path %}
+                        {% if '/accounts/login/' == request.path %}
                         class="nav-link active sign-in"
                         {% else %} 
                         class="nav-link sign-in"
                         {% endif %} 
-                        href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Login</a>
+                        href="{% url 'ssg_accounts:login' %}"><i class="fa fa-sign-in"></i> Login</a>
                     </li>
 
                     <li class='nav-item'>
                         <a                        
-                        {% if '/accounts/signup' == request.path %}
+                        {% if '/accounts/signup/' == request.path %}
                         class="nav-link active sign-in"
                         {% else %} 
                         class="nav-link sign-in"
                         {% endif %} 
-                        href="{% url 'signup' %}"><i class="fa fa-user"></i> Register</a>
+                        href="{% url 'ssg_accounts:signup' %}"><i class="fa fa-user"></i> Register</a>
                     </li>
                     {% endif %}
 

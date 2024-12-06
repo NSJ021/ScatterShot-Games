@@ -26,7 +26,6 @@ if os.path.isfile('env.py'):
 else:
     DEBUG = False
 
-# DEBUG = True
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,11 +37,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com',
-                 'brandmastermedia.com', 'www.brandmastermedia.com',
                  'scattershotgames.com', 'www.scattershotgames.com']
 
 
@@ -71,19 +67,18 @@ INSTALLED_APPS = [
     'ssg_games',
     'ssg_blog',
     'ssg_accounts',
-    # 'ssg_contact',
+    'ssg_contact',
     # Providers
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
 ]
 
-SITE_ID = 2
+SITE_ID = 4
 
-# BrandMAster ID: 2
-# Scattershot ID: 3
+# Scattershot ID: 4
 
 
-LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_REDIRECT_URL = 'ssg_accounts:dashboard'
 LOGOUT_REDIRECT_URL = '/'
 
 SOCIALACCOUNT_LOGIN_ON_GET = True
@@ -203,7 +198,9 @@ SUMMERNOTE_CONFIG = {
     'cloudinary_storage.storage.MediaCloudinaryStorage',
 
     'attachment_url':
-    'https://res.cloudinary.com/dt5yygt6j/raw/upload/{filename}',
+    'https://res.cloudinary.com/'
+    + os.environ.get('CLOUDINARY_CLOUD_NAME') +
+    '/raw/upload/%7Bfilename%7D',
 
     'attachment_upload_to':
     'Scattershot-summernote/',
@@ -217,6 +214,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
@@ -224,3 +223,4 @@ EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')

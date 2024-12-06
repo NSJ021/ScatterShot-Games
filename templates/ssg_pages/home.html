@@ -5,7 +5,7 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner banner-slider-inner text-center">
             <div class="carousel-item banner-max-height active item-bg">
-                <img class="d-block w-100 h-100" src="{% static 'img/logos/logo.webp' %}" alt="banner" />
+                <img class="d-block w-100 h-100" src="{% static 'img/logos/logo.webp' %}" draggable="false" alt="banner" />
                 <div class="carousel-content container banner-info-2 bi-2 text-left"></div>
             </div>
         </div>
@@ -21,7 +21,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1><i class="fa-solid fa-dice"></i> <span>Featured Games</span> <i class="fa-solid fa-dice"></i></h1>
-            <p>Checkout our recent releases and featured content.</p>
+            <p>Step into the world of niche, print-and-play board games! Discover our featured game of the month—crafted to surprise, challenge, and delight players of all skill levels. Each game offers a unique experience, promising hours of fun and creativity.</p>
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
@@ -101,12 +101,12 @@
 <!-- Featured Games end -->
 
 <!-- Blog Section start -->
-<div class="featured-section content-area">
+<div class="featured-section content-area-3">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
             <h1><i class="fa-solid fa-blog"></i> <span>Latest News</span> <i class="fa-solid fa-blog"></i></h1>
-            <p>ScatterShot Blog Space, your one stop shop for all things ScatterShot</p>
+            <p>Stay in the loop! From exciting game launches to insider updates, our news section keeps you informed about everything happening at Scattershot Games. Check back often for fresh announcements and community highlights.</p>
         </div>
         <div class="row">
             {% for post in posts %} {% if post.is_featured == True and post.status == 1%}
@@ -140,12 +140,12 @@
 <!-- Blog Section end -->
 
 <!-- About start -->
-<div class="content-area bg-area-3">
+<div class="content-area-2">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
             <h1><i class="fa-solid fa-people-group"></i> <span>Team ScatterShot </span> <i class="fa-solid fa-people-group"></i></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <p>Scattershot Games is powered by a small but passionate team of board game enthusiasts. We’re dedicated to crafting fun, innovative games that bring people together. From brainstorming to design, we pour our hearts into every detail.</p>
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">

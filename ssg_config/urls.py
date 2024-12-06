@@ -16,13 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('games/', include('ssg_games.urls')),
     path('blog/', include('ssg_blog.urls')),
-    path('accounts/', include('ssg_accounts.urls')),
+    path('contact/', include('ssg_contact.urls')),
+    path('accounts/', include('ssg_accounts.urls', namespace='ssg_accounts')),
     path('socialaccounts/', include('allauth.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('', include('ssg_pages.urls')),
+
+    path(
+        'reset/done/',
+        auth_views.PasswordResetCompleteView.as_view(
+            template_name='ssg_accounts/password_reset_complete.html'
+        ),
+        name='password_reset_complete',
+    ),
 ]
