@@ -751,21 +751,105 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 
 ### Testing Results
 
-<br>
-<p align="center">
-<img src=".\ReadMe_Images\ssg_testing_1.png" alt="ssg testing image">
-</P>
-<br>
+### Home Page
 
-<br>
-<p align="center">
-<img src=".\ReadMe_Images\ssg_testing_2.png" alt="ssg testing image">
-</P>
-<br>
+| Test                                  | Result |
+| ------------------------------------- | ------ |
+| Home:                                 | Pass   |
+| Games: It redirect to games page      | Pass   |
+| About:It redirect to about page       | Pass   |
+| Blog: It redirect to blog page        | Pass   |
+| Contact:It redirect to contact page   | Pass   |
+| Sign In: It redirect to sign In page  | Pass   |
+| Register:It redirect to register page | Pass   |
+| Displays only games that are featured                | Pass |
+| Displays only blog posts that are featured                | Pass |
+| Displays correct details about Team Scattershot             | Pass |
 
-Summarize the results of testing across different devices and screen sizes.  
-Mention any issues found and how they were resolved.  
-**Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
+### Games Page
+
+| Test                                             | Pass |
+| ------------------------------------------------ | ---- |
+| Displays all games                  | Pass |
+| Paginates after more than 4 games are displayed          | Pass |
+| All Pages in Naviagtion bar link correctly            | Pass |
+
+
+### Games Details Pages
+
+| Test                                             | Pass |
+| ------------------------------------------------ | ---- |
+| Displays all relevant details about the game in question                | Pass |
+| All Pages in Naviagtion bar link correctly          | Pass |
+| When logged out user can not comment            | Pass |
+| When logged in user can comment, edit and delete their own comments      | Pass |
+| Comments are not Live until approved by admin in admin panel | Pass |
+
+### About Page
+
+| Test                                             | Pass |
+| ------------------------------------------------ | ---- |
+| Displays correct information about scattershot games     | Pass |
+| Displays correct details about Team Scattershot   | Pass |
+| All Pages in Naviagtion bar link correctly        | Pass |
+
+
+### Blog Page
+
+| Test                                             | Pass |
+| ------------------------------------------------ | ---- |
+| Displays all blog posts                          | Pass |
+| All Pages in Naviagtion bar link correctly        | Pass |
+
+### Post Details Pages
+
+| Test                                             | Pass |
+| ------------------------------------------------ | ---- |
+| Displays all relevant details about the post     | Pass |
+| All Pages in Naviagtion bar link correctly       | Pass |
+| When logged out user can not comment             | Pass |
+| When logged in user can comment, edit and delete their own comments      | Pass |
+| Comments are not Live until approved by admin in admin panel | Pass |
+
+### Contact Page
+
+| Test                                        | Result |
+| ------------------------------------------- | ------ |
+| Contact form validates fields correctly                 | Pass   |
+| Contact form sends data and stores in model correctly     | Pass   |
+| Contact form gets all admin emails and sends notification email to all admins and the email left by the user        | Pass   |
+| All Pages in Naviagtion bar link correctly       | Pass |
+
+### Login Page
+
+| Test                                        | Result |
+| ------------------------------------------- | ------ |
+| Secure Login functionality                  | Pass   |
+| Google and Facebook Login functionality     | Pass   |
+| Redirect after successful login             | Pass   |
+| All Pages in Naviagtion bar link correctly       | Pass |
+
+### Registration Page
+
+| Test                                               | Result |
+| -------------------------------------------------- | ------ |
+| Secure Registration functionality                  | Pass   |
+| Google and Facebook Registration functionality     | Pass   |
+| Redirect after successful Registration             | Pass   |
+| All Pages in Naviagtion bar link correctly       | Pass |
+
+### Dashboard Page
+
+| Test                                               | Result |
+| -------------------------------------------------- | ------ |
+| Once logged in User is taken to dashboard                | Pass   |
+| Dashboard only shown to logged in User     | Pass   |
+| user can change their, username, email and password for their account via dashboard            | Pass   |
+| Dashboard displays summary of messages sent via the contact form by the logged in User       | Pass |
+| Dashboard displays summary of blog post comments made by the logged in User      | Pass |
+| Dashboard displays summary of game page comments made by the logged in User      | Pass |
+| All Pages in Naviagtion bar link correctly       | Pass |
+
 
 ## Bugs and Known Issues
 
@@ -780,8 +864,8 @@ Mention any issues found and how they were resolved.
 -   <strong>Bug 3</strong>: Cloudinary returns HTTP responce rather than HTTPS which causes a console error.
 -   <strong>Fix</strong>: Cloudinary will need to update there type of responce given when an image is fetched.
 
--   <strong>Bug 4</strong>:
--   <strong>Fix</strong>:
+-   <strong>Bug 4</strong>: Password Reset Functionality on the Login page, Email reset link would not load properly
+-   <strong>Fix</strong>: Reconfigured URLS for accounts app and project, project URLS now controls the final stages of the reset process.
 
 -   <strong>Bug 5</strong>:
 -   <strong>Fix</strong>:
@@ -790,31 +874,38 @@ Mention any issues found and how they were resolved.
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_html_validator.png" alt="ssg html validator image">
+<img src=".\ReadMe_Images\html_validator_1.png" alt="ssg html validator image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_css_validator.png" alt="ssg css validator image">
+<img src=".\ReadMe_Images\html_validator_2.png" alt="ssg css validator image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_JS_linter.png" alt="ssg JS linter image">
+<img src=".\ReadMe_Images\css_validator_1.png" alt="ssg JS linter image">
 </P>
 <br>
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_python_linter.png" alt="ssg python linter image">
+<img src=".\ReadMe_Images\jslint_validator_1.png" alt="ssg JS linter image">
 </P>
 <br>
 
-Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
-Include the results of the validation process.  
-**Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
+App.js and comments.js are the only Javascript files I have added code too.
+Firstly App.js is a script to initiate all the various third-party JS libraries used and worsk with JQuery. Apps.js has be preliminarily Linted but still contains warnings.
+Comments.js is the logic created via the the CI blog walkthrough project, therefore this code has also be prelimnarily Linted but still contains warnings.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\pylint_validator_1.png" alt="ssg python linter image">
+</P>
+<br>
+
 
 ## AI Tools Usage
 
@@ -871,6 +962,37 @@ Such as database url, cloudinary url, email settings etc.
 </P>
 <br>
 
+### Deploying to a Custom Domain
+
+As a requirement for the client of this project hosting the finalised web app on a custom domain was needed.
+The client provided access to Wix, their domain provider.
+First, the domain must be setup in the settings section on heroku.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\domain_deploy_1.png" alt="ssg heroku deployment image">
+</P>
+<br>
+
+Next ensuring the settings.py file is correctly setup, providing a site ID, and allowed hosts.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\domain_deploy_2.png" alt="ssg heroku deployment image">
+</P>
+<br>
+
+Followed by ensuring the django admin has the domain setup correctly.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\domain_deploy_3.png" alt="ssg heroku deployment image">
+</P>
+<br>
+
+Fianlly accessing the domain providers records and linking them up.
+
+
 ## Code Attribution and Credit
 
 ### Jquery, Gallery, SlickSlide etc
@@ -884,6 +1006,9 @@ To create a more polished and interactive experience I utilised various javascri
 [Jquery](https://www.jqueryscript.net/) <br> Core Jquery code to allow jquery plugins to work properly<br>
 [Scroll Up](https://markgoodyear.com/2013/01/scrollup-jquery-plugin/) <br> Scroll Up is another Jquery plugin that allows the user to jump back to the top of the page<br>
 [Bootstrap](https://getbootstrap.com) <br> Bootstrap used for responsiveness, styling and required for the above plugins and functionality<br>
+
+
+All third party code has not been Linted and will most likely not meet any relevant standard, whether that be PEP8 or ES6
 
 ## Reflection on Development Process
 
