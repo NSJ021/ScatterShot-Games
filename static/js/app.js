@@ -1,181 +1,141 @@
 $(function () {
-    'use strict';
+    "use strict";
 
-    // Made the left sidebar's min-height to window's height
-    var winHeight = $(window).height();
-    $('.dashboard-nav').css('min-height', winHeight);
-
-    // Magnify activation
-    $('.portfolio-item').magnificPopup({
-        delegate: 'a',
+    // Activate Magnify on portfolio items
+    $(".portfolio-item").magnificPopup({
+        delegate: "a",
         gallery: { enabled: true },
-        type: 'image',
+        type: "image"
     });
 
-    $('.game-magnify-gallery').lightGallery();
+    // Activate LightGallery
+    $(".game-magnify-gallery").lightGallery();
 
-    $(document).on('click', '.compare-btn', function (event) {
-        if ($(event.currentTarget).hasClass('active')) {
-            $(event.currentTarget).removeClass('active');
-            $.jnoty('Game has been removed from compare list', {
-                header: 'Warning',
-                icon: 'fa fa-check-circle',
-                sticky: true,
-                theme: 'jnoty-warning',
-            });
-        } else {
-            $(event.currentTarget).addClass('active');
-            $.jnoty('Game has been added to compare list', {
-                header: 'Success',
-                icon: 'fa fa-check-circle',
-                sticky: true,
-                theme: 'jnoty-success',
-            });
-        }
-    });
-
-    $(document).on('click', '.wishlist-btn', function (event) {
-        if ($(event.currentTarget).hasClass('active')) {
-            $(event.currentTarget).removeClass('active');
-            $.jnoty('Game has been removed from wishlist list', {
-                header: 'Warning',
-                icon: 'fa fa-check-circle',
-                sticky: true,
-                theme: 'jnoty-warning',
-            });
-        } else {
-            $(event.currentTarget).addClass('active');
-            $.jnoty('Game has been added to wishlist list', {
-                header: 'Success',
-                icon: 'fa fa-check-circle',
-                sticky: true,
-                theme: 'jnoty-success',
-            });
-        }
-    });
-
-    // Header shrink while page scroll
+    // Call header and layout adjustment functions
     adjustHeader();
     doSticky();
     placedDashboard();
-    $(window).on('scroll', function () {
+
+    // Window scroll and resize event listeners
+    $(window).on("scroll", () => {
         adjustHeader();
         doSticky();
         placedDashboard();
     });
 
-    // Header shrink while page resize
-    $(window).on('resize', function () {
+    $(window).on("resize", () => {
         adjustHeader();
         doSticky();
         placedDashboard();
     });
 
     function adjustHeader() {
-        var windowWidth = $(window).width();
+        const windowWidth = $(window).width();
         if (windowWidth > 0) {
             if ($(document).scrollTop() >= 100) {
-                if ($('.header-shrink').length < 1) {
-                    $('.sticky-header').addClass('header-shrink');
+                if ($(".header-shrink").length === 0) {
+                    $(".sticky-header").addClass("header-shrink");
                 }
-                if ($('.do-sticky').length < 1) {
-                    $('.company-logo img').attr('src', 'static/img/logos/logo.jpg');
+                if ($(".do-sticky").length === 0) {
+                    $(".company-logo img").attr("src",
+                        "static/img/logos/logo.jpg");
                 }
             } else {
-                $('.sticky-header').removeClass('header-shrink');
-                if ($('.do-sticky').length < 1 && $('.fixed-header').length == 0 && $('.fixed-header2').length == 0) {
-                    $('.company-logo img').attr('src', 'static/img/logos/logo.jpg');
+                $(".sticky-header").removeClass("header-shrink");
+                if (
+                    $(".do-sticky").length === 0 &&
+                    $(".fixed-header").length === 0 &&
+                    $(".fixed-header2").length === 0
+                ) {
+                    $(".company-logo img").attr("src",
+                        "static/img/logos/logo.jpg");
                 } else {
-                    $('.company-logo img').attr('src', 'static/img/logos/logo.jpg');
+                    $(".company-logo img").attr("src",
+                        "static/img/logos/logo.jpg");
                 }
             }
         } else {
-            $('.company-logo img').attr('src', 'static/img/logos/logo.jpg');
+            $(".company-logo img").attr("src",
+                "static/img/logos/logo.jpg");
         }
     }
 
     function doSticky() {
         if ($(document).scrollTop() > 40) {
-            $('.do-sticky').addClass('sticky-header');
-            //$('.do-sticky').addClass('header-shrink');
+            $(".do-sticky").addClass("sticky-header");
         } else {
-            $('.do-sticky').removeClass('sticky-header');
-            //$('.do-sticky').removeClass('header-shrink');
+            $(".do-sticky").removeClass("sticky-header");
         }
     }
 
     function placedDashboard() {
-        var headerHeight = parseInt($('.main-header').height(), 10);
-        $('.dashboard').css('top', headerHeight);
+        const headerHeight = parseInt($(".main-header").height(), 10);
+        $(".dashboard").css("top", headerHeight);
     }
 
-    // Page scroller initialization.
+    // Initialize page scroller
     $.scrollUp({
-        activeOverlay: false,
-        animation: 'fade',
+        animation: "fade",
         animationSpeed: 200,
-        easingType: 'linear',
+        easingType: "linear",
         scrollDistance: 300,
-        scrollFrom: 'top',
+        scrollFrom: "top",
         scrollImg: false,
-        scrollName: 'page_scroller',
+        scrollName: "page_scroller",
         scrollSpeed: 500,
-        scrollTarget: false,
         scrollText: "<i class='fa fa-chevron-up'></i>",
-        scrollTitle: false,
-        scrollTrigger: false,
-        zIndex: 2147483647,
+        zIndex: 2147483647
     });
 
-    // Select picket
-    $('.selectpicker').selectpicker();
+    // Initialize select picker
+    $(".selectpicker").selectpicker();
 
-    // Carousel with partner initialization
-    (function () {
-        $('#ourPartners').carousel({ interval: 3600 });
+    // Initialize partner carousel
+    (() => {
+        $("#ourPartners").carousel({ interval: 3600 });
     })();
 
-    $('.our-partners .item').each(function (index, element) {
-        var itemToClone = $(element);
+    $(".our-partners .item").each((index, element) => {
+        let itemToClone = $(element);
         for (var i = 1; i < 4; i++) {
             itemToClone = itemToClone.next();
             if (!itemToClone.length) {
-                itemToClone = $(this).siblings(':first');
+                itemToClone = $(element).siblings(":first");
             }
             itemToClone
-                .children(':first-child')
+                .children(":first-child")
                 .clone()
-                .addClass('cloneditem-' + i)
-                .appendTo($(this));
+                .addClass(`cloneditem-${i}`)
+                .appendTo($(element));
         }
     });
 
-    // Slick Sliders
-    $('.slick-carousel').each(function () {
-        var slider = $(this);
-        $(this).slick({
+    // Initialize Slick sliders
+    $(".slick-carousel").each(function () {
+        const slider = $(this);
+        slider.slick({
             infinite: true,
             dots: false,
             arrows: false,
             centerMode: true,
-            centerPadding: '0',
+            centerPadding: "0",
         });
-        $(this)
-            .closest('.slick-slider-area')
-            .find('.slick-prev')
-            .on('click', function () {
-                slider.slick('slickPrev');
+        slider
+            .closest(".slick-slider-area")
+            .find(".slick-prev")
+            .on("click", () => {
+                slider.slick("slickPrev");
             });
-        $(this)
-            .closest('.slick-slider-area')
-            .find('.slick-next')
-            .on('click', function () {
-                slider.slick('slickNext');
+        slider
+            .closest(".slick-slider-area")
+            .find(".slick-next")
+            .on("click", () => {
+                slider.slick("slickNext");
             });
     });
 
-    // Alert Time Out
-    setTimeout(function () {
-        $('#message').fadeOut('slow');
-    }, 4000); // <-- time in milliseconds
+    // Fade out messages after timeout
+    setTimeout(() => {
+        $("#message").fadeOut("slow");
+    }, 4000);
 });
