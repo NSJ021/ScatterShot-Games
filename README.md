@@ -527,17 +527,24 @@ The chosen colour scheme, compliments the themes used within Scattershots produc
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_colour_scheme.png" alt="ssg colour scheme image">
+<img src=".\ReadMe_Images\colour_scheme_1.png" alt="ssg colour scheme image">
 </P>
 <br>
 
 #### Colour Contrast
 
-Colour contrast was considered during the colour scheme selection. Details are shown below.
+Colour contrast was considered during the colour scheme selection. 
+Details show how the lighter end of contrast as well as the darker end below.
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_colour_contrast.png" alt="ssg colour contrast image">
+<img src=".\ReadMe_Images\colour_contrast_1.png" alt="ssg colour contrast image">
+</P>
+<br>
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\colour_contrast_2.png" alt="ssg colour contrast image">
 </P>
 <br>
 
@@ -553,17 +560,15 @@ Robotto is one of the chosen Fonts used for this project.
 
 #### LightHouse Scores
 
+Lighthose also knwon as PageSpeed Insights, scores are shown below. Performance is lacking across the site, however this is due to unoptimised images.
+These will be addressed in future iterations of project.
+
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\ssg_lighthouse_1.png" alt="ssg lighthouse score image">
 </P>
 <br>
 
-<br>
-<p align="center">
-<img src=".\ReadMe_Images\ssg_lighthose_2.png" alt="ssg lighthouse score image">
-</P>
-<br>
 
 ## Features Implementation
 
@@ -756,12 +761,12 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 | Test                                  | Result |
 | ------------------------------------- | ------ |
 | Home:                                 | Pass   |
-| Games: It redirect to games page      | Pass   |
-| About:It redirect to about page       | Pass   |
-| Blog: It redirect to blog page        | Pass   |
-| Contact:It redirect to contact page   | Pass   |
-| Sign In: It redirect to sign In page  | Pass   |
-| Register:It redirect to register page | Pass   |
+| Games: It redirects to games page      | Pass   |
+| About: It redirects to about page       | Pass   |
+| Blog: It redirects to blog page        | Pass   |
+| Contact:It redirects to contact page   | Pass   |
+| Sign In: It redirects to sign In page  | Pass   |
+| Register:It redirects to registration page | Pass   |
 | Displays only games that are featured                | Pass |
 | Displays only blog posts that are featured                | Pass |
 | Displays correct details about Team Scattershot             | Pass |
@@ -872,6 +877,7 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 
 ### Validation
 
+#### HTML Validation
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\html_validator_1.png" alt="ssg html validator image">
@@ -884,11 +890,18 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 </P>
 <br>
 
+#### CSS Validation
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\css_validator_1.png" alt="ssg JS linter image">
 </P>
 <br>
+
+#### Javascript Validation
+
+App.js and comments.js are the only Javascript files I have added code too.
+Firstly App.js is a script to initiate all the various third-party JS libraries used and works with JQuery. App.js has be preliminarily Linted but still contains warnings.
+Comments.js is the logic created via the the CI blog walkthrough project, therefore this code has also be prelimnarily Linted but still contains warnings.
 
 <br>
 <p align="center">
@@ -896,15 +909,20 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 </P>
 <br>
 
-App.js and comments.js are the only Javascript files I have added code too.
-Firstly App.js is a script to initiate all the various third-party JS libraries used and worsk with JQuery. Apps.js has be preliminarily Linted but still contains warnings.
-Comments.js is the logic created via the the CI blog walkthrough project, therefore this code has also be prelimnarily Linted but still contains warnings.
+
+#### Python Validation
+
+All Python files have be created alongside the Pylint extension as well as being checked in the CI Python Linter Shown.
+All third-party code, including but not limted to Cloudinary, Summernote, Django and its migration files created for this project have not been Linted, due to they are created via a third party package and or code.
+Flake8 was also used to check for errors throughout the project.
 
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\pylint_validator_1.png" alt="ssg python linter image">
 </P>
 <br>
+
+
 
 
 ## AI Tools Usage
