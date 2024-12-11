@@ -36,12 +36,12 @@ def signup(request):
             # Check if username already exists
             if User.objects.filter(username=username).exists():
                 messages.error(request, 'Username already exists')
-                return redirect('signup')
+                return redirect('ssg_accounts:signup')
             else:
                 # Check if email already exists
                 if User.objects.filter(email=email).exists():
                     messages.error(request, 'Email already exists')
-                    return redirect('signup')
+                    return redirect('ssg_accounts:signup')
                 else:
                     # Create user
                     user = User.objects.create_user(
@@ -53,7 +53,7 @@ def signup(request):
                     return redirect('ssg_accounts:dashboard')
         else:
             messages.error(request, 'Passwords do not match')
-            return redirect('signup')
+            return redirect('ssg_accounts:signup')
     else:
         return render(request, 'ssg_accounts/signup.html')
 
@@ -76,7 +76,7 @@ def login(request):
             return redirect('ssg_accounts:dashboard')
         else:
             messages.error(request, 'Invalid credentials')
-            return redirect('login')
+            return redirect('ssg_accounts:login')
     return render(request, 'ssg_accounts/login.html')
 
 # Logout view
@@ -92,7 +92,7 @@ def logout(request):
     return redirect('home')
 
 
-@login_required(login_url='login')
+@login_required(login_url='ssg_accounts:login')
 def dashboard(request):
     """
     View for the user dashboard.
@@ -114,7 +114,7 @@ def dashboard(request):
                     messages.success(request, 'Username successfully changed!')
                 except Exception as e:
                     messages.error(request, f'Failed to change username: {e}')
-            return redirect('dashboard')
+            return redirect('ssg_accounts:dashboard')
 
         if email_form.is_valid() and 'email' in request.POST:
             new_email = email_form.cleaned_data['new_email']
@@ -127,13 +127,13 @@ def dashboard(request):
                     messages.success(request, 'Email successfully changed!')
                 except Exception as e:
                     messages.error(request, f'Failed to change email: {e}')
-            return redirect('dashboard')
+            return redirect('ssg_accounts:dashboard')
 
         if password_form.is_valid() and 'password' in request.POST:
             user = password_form.save()
             update_session_auth_hash(request, user)  # Important!
             messages.success(request, 'Password successfully changed!')
-            return redirect('dashboard')
+            return redirect('ssg_accounts:dashboard')
         else:
             messages.error(request, 'Please correct the error below.')
 
