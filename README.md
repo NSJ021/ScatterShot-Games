@@ -915,7 +915,7 @@ These will be addressed in future iterations of project, primary issues are all 
 -   <strong>Fix</strong>: Reconfigured URLS for accounts app and project, project URLS now controls the final stages of the reset process.
 
 -   <strong>Bug 5</strong>: If password dont match on signup, a 404 error page is shown. If the user goes back a page then correct error is shown, thus meaning a url conflict is happening.
--   <strong>Fix</strong>: Looking into fixing this bug in future iterations, signup funcitonality does work correctly minus this issue.
+-   <strong>Fix</strong>: Issue found with naming of redirect urls in ssg_accounts views.py, app names were missing from URL redirects
 
 -   <strong>Bug 6</strong>: Modal popup when deleting a comment, neither X or close button actually close the model. Names and attributes appear to be ok, unsure on this issue.
 -   <strong>Fix</strong>: Looking into fixing this bug in future iterations, modal can be closed via completing the action or clicking off the modal.
