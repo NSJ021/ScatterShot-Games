@@ -763,7 +763,7 @@ Additionally <strong>Emails</strong> are sent to all site admins and the email a
 Having a <strong>User Dashboard</strong>, not only gives polish to the web application but it provides a lcoation on the site that is unique to each User.
 The dashboard contains,
 
-=   Access to <strong>Admin Panel</strong>, for all signed in Admin/Staff accounts
+-   Access to <strong>Admin Panel</strong>, for all signed in Admin/Staff accounts
 -   Ability to edit <strong>Acount Details</strong>, Username, Email and Password
 -   All <strong>Messages</strong> sent by the user vai the contact form
 -   Any <strong>Comments</strong> left on a game by the User, with a link to the relevant page.
@@ -877,7 +877,7 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 | -------------------------------------------------- | ------ |
 | Once logged in User is taken to dashboard                | Pass   |
 | Dashboard only shown to logged in User     | Pass   |
-| user can change their, username, email and password for their account via dashboard            | Pass |
+| User can change their, username, email and password for their account via dashboard            | Pass |
 | Admin can access the Admin Panel via a buttoin through the dashboard when logged in as a Admin | Pass |
 | Dashboard displays summary of messages sent via the contact form by the logged in User       | Pass |
 | Dashboard displays summary of blog post comments made by the logged in User      | Pass |
