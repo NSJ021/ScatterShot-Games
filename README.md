@@ -566,7 +566,7 @@ Robotto is one of the chosen Fonts used for this project.
 #### LightHouse Scores
 
 Lighthose also knwon as PageSpeed Insights, scores are shown below. Performance is lacking across the site, however this is due to unoptimised images.
-These will be addressed in future iterations of project.
+These will be addressed in future iterations of project, primary issues are all relating to use of Javascript libraries and image ratios.
 
 <br>
 <p align="center">
@@ -782,7 +782,9 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 
 ## Testing and Validation
 
-### Testing Results
+Below is a tabulated list of the various pages, along with the cariety of manual tests that were conducted.
+
+### Manual Testing Results
 
 ### Home Page
 
