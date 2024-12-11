@@ -5,6 +5,11 @@
 </P>
 <br>
 
+<p align="center">
+<img src=".\ReadMe_Images\ssg_final_product_2.png" alt="ssg final product image">
+</P>
+<br>
+
 ## Overview
 
 ### Purpose
@@ -583,7 +588,7 @@ This allows a conveinent way for the admin to mange their site content.
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_homepage.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_home.png" alt="ssg feature image">
 </P>
 <br>
 
@@ -603,6 +608,11 @@ Worth noting all comments must be <strong>approved</strong> via a site admin in 
 </P>
 <br>
 
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_gamepage_2.png" alt="ssg feature image">
+</P>
+<br>
+
 ---
 
 -   **Feature 3:** Dedicated Blog Page
@@ -619,6 +629,12 @@ Worth noting all comments must be <strong>approved</strong> via a site admin in 
 </P>
 <br>
 
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_blogpage_2.png" alt="ssg feature image">
+</P>
+<br>
+
+
 ---
 
 -   **Feature 4:** Registration page
@@ -629,7 +645,7 @@ Visitors will have the ability to signup in a conventional sense via the form or
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_registration.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_signup.png" alt="ssg feature image">
 </P>
 <br>
 
@@ -688,7 +704,7 @@ It simply stores a link in the <strong>Postgres Database</strong> to the resourc
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_5.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_cloudinary.png" alt="ssg feature image">
 </P>
 <br>
 
@@ -709,7 +725,12 @@ When talking about customisation,
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_6.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_admin.png" alt="ssg feature image">
+</P>
+<br>
+
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_admin_2.png" alt="ssg feature image">
 </P>
 <br>
 
@@ -726,7 +747,12 @@ Additionally <strong>Emails</strong> are sent to all site admins and the email a
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_6.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_feedback_1.png" alt="ssg feature image">
+</P>
+<br>
+
+<p align="center">
+<img src=".\ReadMe_Images\ssg_feature_feedback_2.png" alt="ssg feature image">
 </P>
 <br>
 
@@ -737,6 +763,8 @@ Additionally <strong>Emails</strong> are sent to all site admins and the email a
 Having a <strong>User Dashboard</strong>, not only gives polish to the web application but it provides a lcoation on the site that is unique to each User.
 The dashboard contains,
 
+=   Access to <strong>Admin Panel</strong>, for all signed in Admin/Staff accounts
+-   Ability to edit <strong>Acount Details</strong>, Username, Email and Password
 -   All <strong>Messages</strong> sent by the user vai the contact form
 -   Any <strong>Comments</strong> left on a game by the User, with a link to the relevant page.
 -   Any <strong>Comments</strong> left on a blog post by the User, with a link to the relevant page.
@@ -746,7 +774,7 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 
 <br>
 <p align="center">
-<img src=".\ReadMe_Images\ssg_feature_6.png" alt="ssg feature image">
+<img src=".\ReadMe_Images\ssg_feature_dashboard.png" alt="ssg feature image">
 </P>
 <br>
 
@@ -849,7 +877,8 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 | -------------------------------------------------- | ------ |
 | Once logged in User is taken to dashboard                | Pass   |
 | Dashboard only shown to logged in User     | Pass   |
-| user can change their, username, email and password for their account via dashboard            | Pass   |
+| user can change their, username, email and password for their account via dashboard            | Pass |
+| Admin can access the Admin Panel via a buttoin through the dashboard when logged in as a Admin | Pass |
 | Dashboard displays summary of messages sent via the contact form by the logged in User       | Pass |
 | Dashboard displays summary of blog post comments made by the logged in User      | Pass |
 | Dashboard displays summary of game page comments made by the logged in User      | Pass |
@@ -872,8 +901,6 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 -   <strong>Bug 4</strong>: Password Reset Functionality on the Login page, Email reset link would not load properly
 -   <strong>Fix</strong>: Reconfigured URLS for accounts app and project, project URLS now controls the final stages of the reset process.
 
--   <strong>Bug 5</strong>:
--   <strong>Fix</strong>:
 
 ### Validation
 
@@ -912,7 +939,7 @@ Comments.js is the logic created via the the CI blog walkthrough project, theref
 
 #### Python Validation
 
-All Python files have be created alongside the Pylint extension as well as being checked in the CI Python Linter Shown.
+All Python files have be created alongside the Pylint extension as well as being checked in the CI Python Linter shown Below.
 All third-party code, including but not limted to Cloudinary, Summernote, Django and its migration files created for this project have not been Linted, due to they are created via a third party package and or code.
 Flake8 was also used to check for errors throughout the project.
 
@@ -953,7 +980,7 @@ Heroku has a few requirements that need to be setup to allow heroku to host prop
 These 3 files tell Heroku what to do, how to do and with what basic settings.
 In order to deploy on Heroku firstly GitHub had to be linked to Heroku to allow the Repo be pulled from.
 Once linked to GitHub and a Repo selected. Heroku can attempt deployments based on the designated Repo.
-Heroku also requires all environment variables to be stored in the settings of the app, this allows Heroku to access all areas of the django project.
+Heroku also requires all environment variables to be stored in the settings of the app and to be assigned on heroku itself as a config Var, this allows Heroku to access all areas of the django project.
 Such as database url, cloudinary url, email settings etc.
 
 <br>
@@ -1032,18 +1059,20 @@ All third party code has not been Linted and will most likely not meet any relev
 
 ### Successes
 
-Effective use of AI tools, including GitHub Copilot, and how they contributed to the development process.
+This project had many successes, firstly th correct filtering of models in various sections of the web application works very well, particularly the homepage as this gives the owner the ability to highlight their content.
+CoPilot was an invaluable tool used during the project, it allows extensive fault finding and explainations of how to go about creating the required logic and processes needed throughout the project.
 
 ### Challenges
 
-Describe any challenges faced when integrating AI-generated content and how they were addressed.
+There were various challenges throughout the project. One in particular was the fact the project is for an actual friend and client, so the MVP was a benchmark that had to be pushed past to en extent,
+Another challenge was intergrating the external javascript gallery and libraries as well as intergrating the blog setup which was taken from the blog walkthrough, once implemented various tweaks changes and adaptations were made.
 
 ### Final Thoughts
 
-Provide any additional insights gained during the project and thoughts on the overall process.  
-**Guidance:** Begin drafting reflections during Phase 1 and update throughout the project. Finalize this section after Phase 4. Highlight successes and challenges, particularly regarding the use of AI tools, and provide overall insights into the project.
+The end result of ScatterShotGames.com has turned out great, yes the project is not perfect. However as an extended MVP and first iteration of the web application this is more that sufficient for the clients needs.
+With the creation, hosting and configutation of the ScatterShotGames App, it will furfill its purpose and allow the ScatterShotGames to grow its online presence. 
 
 ## Future Improvements
 
-Briefly discuss potential future improvements or features that could be added to the project.  
-**Guidance:** Reflect on potential enhancements that could be made to the project after Phase 4: Final Testing, Debugging & Deployment. These could be Could user story features you didn’t have time to implement or improvements based on testing feedback.
+Potential future improvements could be refining the styling as a colour scheme wasnt really decided upon from the client so colours were taken as inspiration from one of their game products.
+Another improvement would be more extensive responsiveness fixes as on different mobile screens the games details can be cut off and not as refined, this would require alot more gradular media queries to be setup for more accurate screen sizes.
