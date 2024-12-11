@@ -19,6 +19,11 @@
 </P>
 <br>
 
+[Live Project](https://www.scattershotgames.com)
+<br>
+[Live Project, Heroku Link](https://scattershot-webapp-8d4b8e6ff7a3.herokuapp.com)
+
+
 ScatterShot Games, is an Indie Board Games Creator. With already 4+ custom board games created in house and available to purchase.
 The purpose of this project is to create a full stack web application to allow ScatterShot to gain some online presence
 and build the brand as well as the business in general.
@@ -563,17 +568,6 @@ Robotto is one of the chosen Fonts used for this project.
 </P>
 <br>
 
-#### LightHouse Scores
-
-Lighthose also knwon as PageSpeed Insights, scores are shown below. Performance is lacking across the site, however this is due to unoptimised images.
-These will be addressed in future iterations of project, primary issues are all relating to use of Javascript libraries and image ratios.
-
-<br>
-<p align="center">
-<img src=".\ReadMe_Images\ssg_lighthouse_1.png" alt="ssg lighthouse score image">
-</P>
-<br>
-
 
 ## Features Implementation
 
@@ -784,6 +778,17 @@ Also worth mentioning when a site admin tags a message as read or replied, this 
 
 Below is a tabulated list of the various pages, along with the cariety of manual tests that were conducted.
 
+### LightHouse Scores
+
+Lighthose also knwon as PageSpeed Insights, scores are shown below. Performance is lacking across the site, however this is due to unoptimised images.
+These will be addressed in future iterations of project, primary issues are all relating to use of Javascript libraries and image ratios.
+
+<br>
+<p align="center">
+<img src=".\ReadMe_Images\ssg_lighthouse_1.png" alt="ssg lighthouse score image">
+</P>
+<br>
+
 ### Manual Testing Results
 
 ### Home Page
@@ -903,6 +908,11 @@ Below is a tabulated list of the various pages, along with the cariety of manual
 -   <strong>Bug 4</strong>: Password Reset Functionality on the Login page, Email reset link would not load properly
 -   <strong>Fix</strong>: Reconfigured URLS for accounts app and project, project URLS now controls the final stages of the reset process.
 
+-   <strong>Bug 5</strong>: If password dont match on signup, a 404 error page is shown. If the user goes back a page then correct error is shown, thus meaning a url conflict is happening.
+-   <strong>Fix</strong>: Looking into fixing this bug in future iterations, signup funcitonality does work correctly minus this issue.
+
+-   <strong>Bug 6</strong>: Modal popup when deleting a comment, neither X or close button actually close the model. Names and attributes appear to be ok, unsure on this issue.
+-   <strong>Fix</strong>: Looking into fixing this bug in future iterations, modal can be closed via completing the action or clicking off the modal.
 
 ### Validation
 
@@ -950,8 +960,6 @@ Flake8 was also used to check for errors throughout the project.
 <img src=".\ReadMe_Images\pylint_validator_1.png" alt="ssg python linter image">
 </P>
 <br>
-
-
 
 
 ## AI Tools Usage
