@@ -19,6 +19,11 @@
 </P>
 <br>
 
+[Live Project](https://www.scattershotgames.com)
+<br>
+[Live Project, Heroku Link](https://scattershot-webapp-8d4b8e6ff7a3.herokuapp.com)
+
+
 ScatterShot Games, is an Indie Board Games Creator. With already 4+ custom board games created in house and available to purchase.
 The purpose of this project is to create a full stack web application to allow ScatterShot to gain some online presence
 and build the brand as well as the business in general.
