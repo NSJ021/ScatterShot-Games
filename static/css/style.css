@@ -156,7 +156,7 @@ button:focus {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 12px;
-    background: #ff214f;
+    background: #b11019;
 }
 
 .btn-theme:hover {
@@ -424,7 +424,6 @@ button:focus {
 
 .banner .carousel-bg .carousel-item {
     height: 100vh;
-    background: #3e4a5b;
 }
 
 #particles-banner {
@@ -800,7 +799,7 @@ button:focus {
     width: 200px;
     font-size: 12px;
     margin: 0;
-    color: #ffffff;
+    color: #000000;
     font-weight: 500;
     line-height: 28px;
     background: #ed8816;
@@ -1095,6 +1094,11 @@ button:focus {
 
 .page-link:focus {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.page-item.active .page-link{
+    background: var(--darkgreen);
+    color: #fff;
 }
 
 /** Main title start **/
@@ -1632,7 +1636,7 @@ input[type='radio'] {
     color: #fff;
 }
 .signup-section .google-bg {
-    background: #f0151f;
+    background: #b11019;
     color: #fff;
 }
 
@@ -1655,7 +1659,7 @@ input[type='radio'] {
 }
 
 .signup-section .google-i {
-    background: #f0151f;
+    background: #b11019;
 }
 
 .signup-section .kickstarter-i {
@@ -1987,7 +1991,7 @@ footer {
 }
 
 .error-page .btn-theme {
-    background-color: #ff6b6b;
+    background-color: #b11019;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
