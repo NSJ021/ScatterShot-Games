@@ -345,6 +345,7 @@ The below design choices were made to ensure the application is responisve acros
 
 #### Desktop Wireframes
 
+<details>
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\wireframe_desktop_home.png" alt="ssg wireframe desktop image">
@@ -404,9 +405,11 @@ The below design choices were made to ensure the application is responisve acros
 <img src=".\ReadMe_Images\wireframe_desktop_dashboard.png" alt="ssg wireframe desktop image">
 </P>
 <br>
+</details>
 
 #### Tablet Wireframes
 
+<details>
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\wireframe_tablet_home.png" alt="ssg wireframe tablet image">
@@ -466,9 +469,11 @@ The below design choices were made to ensure the application is responisve acros
 <img src=".\ReadMe_Images\wireframe_tablet_dashboard.png" alt="ssg wireframe tablet image">
 </P>
 <br>
+</details>
 
 #### Phone Wireframes
 
+<details>
 <br>
 <p align="center">
 <img src=".\ReadMe_Images\wireframe_phone_home.png" alt="ssg wireframe phone image">
@@ -528,6 +533,7 @@ The below design choices were made to ensure the application is responisve acros
 <img src=".\ReadMe_Images\wireframe_phone_dashboard.png" alt="ssg wireframe phone image">
 </P>
 <br>
+</details>
 
 ### Accessibility Considerations
 
